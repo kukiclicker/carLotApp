@@ -1,0 +1,11 @@
+C:\Projects\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.exe.config
+C:\Projects\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Projects\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.pdb
+C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.LogInForm.resources
