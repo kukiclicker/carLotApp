@@ -9,3 +9,14 @@ C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.C
 C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.exe
 C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.pdb
 C:\Projects\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.LogInForm.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.exe.config
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.exe
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\PresentationLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.LogInForm.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.exe
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.pdb
