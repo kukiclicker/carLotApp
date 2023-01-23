@@ -16,6 +16,7 @@ namespace PresentationLayer
         {
             InitializeComponent();
             
+            
         }
 
         private void btnX_MouseClick(object sender, MouseEventArgs e)
@@ -46,6 +47,13 @@ namespace PresentationLayer
         {
             textBoxUsername.Text = "";
             textBoxUsername.ForeColor = Color.Snow;
+        }
+
+        private void btnLogIn_MouseClick(object sender, MouseEventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
+            
         }
     }
 }

@@ -114,6 +114,7 @@
             this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "LOG IN";
             this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnLogIn_MouseClick);
             // 
             // btnX
             // 
