@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,9 +52,15 @@ namespace PresentationLayer
 
         private void btnLogIn_MouseClick(object sender, MouseEventArgs e)
         {
-            Registration registration = new Registration();
-            registration.Show();
-            
+            this.Hide();
+            new CarLotApp().Show();
+
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+         
+            new Registration().Show();
         }
     }
 }

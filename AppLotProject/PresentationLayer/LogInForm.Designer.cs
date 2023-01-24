@@ -102,6 +102,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "REGISTER";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // btnLogIn
             // 
