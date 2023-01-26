@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\ICarRepository.cs" />
+    <Compile Include="Interfaces\IEmployeeRepository.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
