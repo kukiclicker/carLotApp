@@ -63,19 +63,20 @@ namespace DataAccessLayer
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
             {
                 sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "INSERT INTO Employees VALUES (@Name,@LastName,@Email,@PhoneNumber,@Address,@Username,@Password,@Role)";
-                sqlCommand.Parameters.AddWithValue("@Name", employee.Name);
-                sqlCommand.Parameters.AddWithValue("@LastName", employee.Name);
-                sqlCommand.Parameters.AddWithValue("@Email", employee.Email);
-                sqlCommand.Parameters.AddWithValue("@PhoneNumber", employee.PhoneNumber);
-                sqlCommand.Parameters.AddWithValue("@Address", employee.Address);
-                sqlCommand.Parameters.AddWithValue("@Username", employee.UserName);
-                sqlCommand.Parameters.AddWithValue("@Password", employee.Password);
-                sqlCommand.Parameters.AddWithValue("@Role", employee.Role);
-
-                return sqlCommand.ExecuteNonQuery();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "INSERT INTO Employees VALUES (@Name,@LastName,@Email,@PhoneNumber,@Address,@Username,@Password,@Role)";
+                    sqlCommand.Parameters.AddWithValue("@Name", employee.Name);
+                    sqlCommand.Parameters.AddWithValue("@LastName", employee.Name);
+                    sqlCommand.Parameters.AddWithValue("@Email", employee.Email);
+                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", employee.PhoneNumber);
+                    sqlCommand.Parameters.AddWithValue("@Address", employee.Address);
+                    sqlCommand.Parameters.AddWithValue("@Username", employee.UserName);
+                    sqlCommand.Parameters.AddWithValue("@Password", employee.Password);
+                    sqlCommand.Parameters.AddWithValue("@Role", employee.Role);
+                    return sqlCommand.ExecuteNonQuery();
+                } 
             }
         }
         public int UpdateEmployee(Employee employee)

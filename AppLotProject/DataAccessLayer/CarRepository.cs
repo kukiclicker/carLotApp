@@ -38,24 +38,83 @@ namespace DataAccessLayer
                         Color = sqlDataReader.GetString(9),
                         Description = sqlDataReader.GetString(10),
                         Price = sqlDataReader.GetFloat(11),
-                        Condition = sqlDataReader.GetFloat(11),
+                        Condition = sqlDataReader.GetString(11)
                     };
-                    employees.Add(employee);
+                    cars.Add(car);
                 }
-                return employees;
+                return cars;
             }
         }
         public int DeleteCar(int carID)
         {
-            throw new NotImplementedException();
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "DELETE FROM CARS WHERE CarID = @CarID";
+                    sqlCommand.Parameters.AddWithValue("@CarID", carID);
+
+                    return sqlCommand.ExecuteNonQuery();
+                }
+
+            }
         }
         public int InsertCar(Car car)
         {
-            throw new NotImplementedException();
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "INSERT INTO CARS VALUES (@CarID,@Model,@Type,@Year,@CarBody,@Fuel,@Milage,@Engine,@Transmission,@Color,@Description,@Price,@Condition)";
+                    sqlCommand.Parameters.AddWithValue("@CarID", car.CarID);
+                    sqlCommand.Parameters.AddWithValue("@Model", car.Model);
+                    sqlCommand.Parameters.AddWithValue("@Type", car.Type);
+                    sqlCommand.Parameters.AddWithValue("@Year", car.Year);
+                    sqlCommand.Parameters.AddWithValue("@CarBody", car.CarBody);
+                    sqlCommand.Parameters.AddWithValue("@Fuel", car.Fuel);
+                    sqlCommand.Parameters.AddWithValue("@Mileage", car.Mileage);
+                    sqlCommand.Parameters.AddWithValue("@Engine", car.Engine);
+                    sqlCommand.Parameters.AddWithValue("@Transmission", car.Transmission);
+                    sqlCommand.Parameters.AddWithValue("@Color", car.Color);
+                    sqlCommand.Parameters.AddWithValue("@Description", car.Description);
+                    sqlCommand.Parameters.AddWithValue("@Price", car.Price);
+                    sqlCommand.Parameters.AddWithValue("@Condition", car.Condition);
+
+                    return sqlCommand.ExecuteNonQuery();
+                }
+            }
         }
         public int UpdateCar(Car car)
         {
-            throw new NotImplementedException();
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+                string command = "UPDATE CARS SET CarID=@CarID, Model =@Model , " +
+                    "Type=@Type, Year=@Year, CarBody=@CarBody, Fuel=@Fuel, Mileage=@Mileage, " +
+                    "Engine=@Engine,Transmission=@Transmission,Color=@Color,Description=@Description" +
+                    ",Price=@Price, Condition=@Condition  WHERE CarID=@CarID";
+                SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@CarID", car.CarID);
+                sqlCommand.Parameters.AddWithValue("@Model", car.Model);
+                sqlCommand.Parameters.AddWithValue("@Type", car.Type);
+                sqlCommand.Parameters.AddWithValue("@Year", car.Year);
+                sqlCommand.Parameters.AddWithValue("@CarBody", car.CarBody);
+                sqlCommand.Parameters.AddWithValue("@Fuel", car.Fuel);
+                sqlCommand.Parameters.AddWithValue("@Mileage", car.Mileage);
+                sqlCommand.Parameters.AddWithValue("@Engine", car.Engine);
+                sqlCommand.Parameters.AddWithValue("@Transmission", car.Transmission);
+                sqlCommand.Parameters.AddWithValue("@Color", car.Color);
+                sqlCommand.Parameters.AddWithValue("@Description", car.Description);
+                sqlCommand.Parameters.AddWithValue("@Price", car.Price);
+                sqlCommand.Parameters.AddWithValue("@Condition", car.Condition);
+
+                return sqlCommand.ExecuteNonQuery();
+
+            }
         }
     }
 }
