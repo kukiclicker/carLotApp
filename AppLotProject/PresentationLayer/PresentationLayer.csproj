@@ -110,5 +110,15 @@
   <ItemGroup>
     <None Include="Resources\background_img.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{F6F45F22-5199-4FC7-9498-AA78D7016A9B}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

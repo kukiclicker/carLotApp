@@ -33,6 +33,7 @@
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Label();
@@ -55,11 +56,11 @@
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.OrangeRed;
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.ForeColor = System.Drawing.Color.Snow;
             this.textBoxUsername.Location = new System.Drawing.Point(39, 55);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(222, 27);
+            this.textBoxUsername.Size = new System.Drawing.Size(222, 29);
             this.textBoxUsername.TabIndex = 1;
             this.textBoxUsername.Text = "Enter your username:";
             this.textBoxUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxUsername_MouseClick);
@@ -69,19 +70,20 @@
             this.textBoxPassword.BackColor = System.Drawing.Color.OrangeRed;
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.textBoxPassword.ForeColor = System.Drawing.Color.Snow;
             this.textBoxPassword.Location = new System.Drawing.Point(39, 93);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(222, 27);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.Text = "Enter the password";
+            this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.checkBoxShowPassword);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnLogIn);
             this.panel1.Controls.Add(this.textBoxUsername);
@@ -90,6 +92,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(312, 217);
             this.panel1.TabIndex = 3;
+            // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.ForeColor = System.Drawing.Color.Snow;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(204, 126);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(108, 17);
+            this.checkBoxShowPassword.TabIndex = 5;
+            this.checkBoxShowPassword.Text = "Show password";
+            this.checkBoxShowPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // button2
             // 
@@ -115,6 +130,7 @@
             this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "LOG IN";
             this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             this.btnLogIn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnLogIn_MouseClick);
             // 
             // btnX
@@ -148,6 +164,7 @@
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car lot app ";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -164,6 +181,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Label btnX;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
     }
 }
 

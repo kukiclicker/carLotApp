@@ -34,8 +34,8 @@ namespace DataAccessLayer
                         Address = sqlDataReader.GetString(4),
                         PhoneNumber = sqlDataReader.GetString(5),
                         Email = sqlDataReader.GetString(6),
-                        UserName = sqlDataReader.GetString(6),
-                        Role = sqlDataReader.GetString(6),
+                        UserName = sqlDataReader.GetString(7),
+                        Role = sqlDataReader.GetString(8),
                     };
                     employees.Add(employee);
                 }

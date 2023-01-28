@@ -4,3 +4,14 @@ C:\Projects\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyR
 C:\Projects\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Projects\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Projects\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\Shared.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\bin\Debug\Shared.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\BusinessLayer\obj\Debug\BusinessLayer.pdb

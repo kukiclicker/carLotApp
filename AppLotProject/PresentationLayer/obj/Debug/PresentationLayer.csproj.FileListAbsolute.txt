@@ -21,3 +21,10 @@ C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\Prese
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.exe
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.pdb
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.CarLotApp.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\BusinessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\Shared.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\Shared.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete

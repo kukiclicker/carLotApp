@@ -4,3 +4,12 @@ C:\Projects\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.Assem
 C:\Projects\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Projects\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Projects\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\bin\Debug\Shared.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\bin\Debug\Shared.pdb
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
