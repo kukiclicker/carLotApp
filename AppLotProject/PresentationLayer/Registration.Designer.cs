@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.btnRegisterX = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnRegisterX
@@ -46,6 +48,22 @@
             this.btnRegisterX.MouseEnter += new System.EventHandler(this.btnRegisterX_MouseEnter);
             this.btnRegisterX.MouseLeave += new System.EventHandler(this.btnRegisterX_MouseLeave);
             // 
+            // textBoxName
+            // 
+            this.textBoxName.BackColor = System.Drawing.Color.DimGray;
+            this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxName.Location = new System.Drawing.Point(104, 123);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(179, 13);
+            this.textBoxName.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(104, 166);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(179, 20);
+            this.textBox1.TabIndex = 2;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -53,6 +71,8 @@
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background_img1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.btnRegisterX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -66,5 +86,7 @@
         #endregion
 
         private System.Windows.Forms.Label btnRegisterX;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
