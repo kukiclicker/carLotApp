@@ -36,6 +36,7 @@ namespace DataAccessLayer
                         Email = sqlDataReader.GetString(6),
                         UserName = sqlDataReader.GetString(7),
                         Role = sqlDataReader.GetString(8),
+                        Gender = sqlDataReader.GetString(9)
                     };
                     employees.Add(employee);
                 }
@@ -75,6 +76,7 @@ namespace DataAccessLayer
                     sqlCommand.Parameters.AddWithValue("@Username", employee.UserName);
                     sqlCommand.Parameters.AddWithValue("@Password", employee.Password);
                     sqlCommand.Parameters.AddWithValue("@Role", employee.Role);
+                    sqlCommand.Parameters.AddWithValue("@Gender", employee.Gender);
                     return sqlCommand.ExecuteNonQuery();
                 } 
             }
@@ -83,7 +85,7 @@ namespace DataAccessLayer
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
             {
-                string command = "UPDATE Employees SET Name=@Name, LastName =@LastName  Email=@Email, PhoneNumber=@PhoneNumber, Address=@Address, username=@Username, Password=@Password, Role=@Role WHERE EmployeeID=@EmployeeID";
+                string command = "UPDATE Employees SET Name=@Name, LastName =@LastName  Email=@Email, PhoneNumber=@PhoneNumber, Address=@Address, username=@Username, Password=@Password, Role=@Role, Gender = @Gender WHERE EmployeeID=@EmployeeID";
 
                 SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@Name", employee.Name);
@@ -95,6 +97,7 @@ namespace DataAccessLayer
                 sqlCommand.Parameters.AddWithValue("@Password", employee.Password);
                 sqlCommand.Parameters.AddWithValue("@Role", employee.Role);
                 sqlCommand.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
+                sqlCommand.Parameters.AddWithValue("@Gender", employee.Gender);
 
                 sqlConnection.Open();
 

@@ -31,5 +31,30 @@ namespace PresentationLayer
         {
             btnRegisterX.ForeColor = Color.Snow;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnX_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnX_MouseEnter(object sender, EventArgs e)
+        {
+            btnX.ForeColor = Color.OrangeRed;
+        }
+
+        private void btnX_MouseLeave(object sender, EventArgs e)
+        {
+            btnX.ForeColor = Color.Snow;
+        }
     }
 }
