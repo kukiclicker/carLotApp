@@ -56,6 +56,8 @@
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,44 +81,44 @@
             // 
             this.textBoxName.BackColor = System.Drawing.Color.Snow;
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBoxName.Location = new System.Drawing.Point(162, 102);
+            this.textBoxName.Location = new System.Drawing.Point(162, 109);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(255, 33);
+            this.textBoxName.Size = new System.Drawing.Size(255, 27);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.BackColor = System.Drawing.Color.Snow;
             this.textBoxLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxLastName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLastName.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxLastName.Location = new System.Drawing.Point(162, 151);
+            this.textBoxLastName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLastName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxLastName.Location = new System.Drawing.Point(162, 158);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(255, 33);
+            this.textBoxLastName.Size = new System.Drawing.Size(255, 27);
             this.textBoxLastName.TabIndex = 2;
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.Snow;
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxEmail.Location = new System.Drawing.Point(162, 201);
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxEmail.Location = new System.Drawing.Point(162, 208);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(255, 33);
+            this.textBoxEmail.Size = new System.Drawing.Size(255, 27);
             this.textBoxEmail.TabIndex = 3;
             // 
             // textBoxPhone
             // 
             this.textBoxPhone.BackColor = System.Drawing.Color.Snow;
             this.textBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPhone.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhone.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.textBoxPhone.Location = new System.Drawing.Point(162, 252);
+            this.textBoxPhone.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhone.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxPhone.Location = new System.Drawing.Point(162, 259);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(255, 33);
+            this.textBoxPhone.Size = new System.Drawing.Size(255, 27);
             this.textBoxPhone.TabIndex = 4;
             // 
             // btnAddEmployee
@@ -266,7 +268,6 @@
             this.label1.Size = new System.Drawing.Size(150, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "Registration";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelName
             // 
@@ -322,7 +323,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(117, 316);
+            this.label5.Location = new System.Drawing.Point(120, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 15);
             this.label5.TabIndex = 12;
@@ -334,7 +335,7 @@
             this.comboBoxRole.DisplayMember = "Sales manager";
             this.comboBoxRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxRole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxRole.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.comboBoxRole.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Items.AddRange(new object[] {
             "Sales Manager",
@@ -344,7 +345,7 @@
             "Lot Manager",
             "Property Maintenance",
             "HR Consultant"});
-            this.comboBoxRole.Location = new System.Drawing.Point(159, 309);
+            this.comboBoxRole.Location = new System.Drawing.Point(162, 358);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(145, 25);
             this.comboBoxRole.TabIndex = 13;
@@ -355,7 +356,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(104, 359);
+            this.label6.Location = new System.Drawing.Point(103, 413);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 15);
             this.label6.TabIndex = 14;
@@ -367,7 +368,7 @@
             this.radioButtonFemale.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFemale.ForeColor = System.Drawing.Color.Snow;
-            this.radioButtonFemale.Location = new System.Drawing.Point(162, 355);
+            this.radioButtonFemale.Location = new System.Drawing.Point(161, 409);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(65, 21);
             this.radioButtonFemale.TabIndex = 15;
@@ -381,7 +382,7 @@
             this.radioButtonMale.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMale.ForeColor = System.Drawing.Color.Snow;
-            this.radioButtonMale.Location = new System.Drawing.Point(233, 355);
+            this.radioButtonMale.Location = new System.Drawing.Point(232, 409);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(54, 21);
             this.radioButtonMale.TabIndex = 16;
@@ -401,6 +402,29 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Employee information";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Snow;
+            this.label11.Location = new System.Drawing.Point(101, 312);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Address:";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.BackColor = System.Drawing.Color.Snow;
+            this.textBoxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxAddress.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAddress.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxAddress.Location = new System.Drawing.Point(161, 306);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(255, 27);
+            this.textBoxAddress.TabIndex = 18;
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +432,8 @@
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background_img1;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.radioButtonFemale);
@@ -427,6 +453,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -467,5 +494,7 @@
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label btnX;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxAddress;
     }
 }
