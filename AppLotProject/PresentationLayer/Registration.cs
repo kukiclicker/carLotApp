@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,60 @@ namespace PresentationLayer
         private void btnX_MouseLeave(object sender, EventArgs e)
         {
             btnX.ForeColor = Color.Snow;
+        }
+        
+
+        private void btnAddEmployee_MouseClick(object sender, MouseEventArgs e)
+        {
+            Employee emp = new Employee
+            {
+                Name = textBoxName.Text,
+                LastName = textBoxLastName.Text,
+                Email = textBoxEmail.Text,
+                //Address = textBoxAddress   TO-DO
+                Gender = radioButtonMale.Checked ? "male" : radioButtonFemale.Checked ? "female" : "",
+                Password = textBoxPassword.Text,
+                Role = comboBoxRole.Text,
+                PhoneNumber = textBoxPhone.Text,
+                UserName = textBoxUsername.Text
+            };
+            if(textBoxName.Text == "" || textBoxLastName.Text == "" || textBoxEmail.Text == ""
+                || textBoxPhone.Text == "" || textBoxPassword.Text == "" || textBoxUsername.Text == ""
+                || comboBoxRole.Text == "")
+            {
+                MessageBox.Show("All fields must be filled!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!textBoxPassword.Text.Equals(textBoxConfirmPassword))
+            {
+                MessageBox.Show("Passwords doesnt match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPassword.ForeColor = Color.Red;
+                textBoxConfirmPassword.ForeColor = Color.Red;
+            }
+            else
+            {
+                MessageBox.Show("Registration successfull!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxPassword.ForeColor = Color.SaddleBrown;
+        }
+
+        private void textBoxConfirmPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxConfirmPassword.ForeColor = Color.SaddleBrown;
+        }
+
+        private void textBoxConfirmPassword_Enter(object sender, EventArgs e)
+        {
+            textBoxConfirmPassword.ForeColor = Color.SaddleBrown;
+
+        }
+
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            textBoxPassword.ForeColor = Color.SaddleBrown;
         }
     }
 }
