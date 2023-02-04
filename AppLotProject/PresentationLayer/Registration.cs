@@ -71,7 +71,7 @@ namespace PresentationLayer
                 MessageBox.Show("All fields must be filled!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //checking if passwords match
-            else if(!textBoxPassword.Text.Equals(textBoxConfirmPassword))
+            else if(!textBoxPassword.Text.Equals(textBoxConfirmPassword.Text))
             {
                 MessageBox.Show("Passwords doesnt match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxPassword.ForeColor = Color.Red;
@@ -105,6 +105,11 @@ namespace PresentationLayer
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             textBoxPassword.ForeColor = Color.SaddleBrown;
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

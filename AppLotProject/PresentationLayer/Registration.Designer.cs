@@ -133,6 +133,7 @@
             this.btnAddEmployee.TabIndex = 5;
             this.btnAddEmployee.Text = "CREATE";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             this.btnAddEmployee.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddEmployee_MouseClick);
             // 
             // panel1
