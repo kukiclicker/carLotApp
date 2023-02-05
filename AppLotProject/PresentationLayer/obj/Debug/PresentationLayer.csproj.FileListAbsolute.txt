@@ -29,3 +29,4 @@ C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\Share
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.Registration.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.AdminApproval.resources

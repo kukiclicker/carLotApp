@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminApproval.Designer.cs">
+      <DependentUpon>AdminApproval.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarLotApp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminApproval.resx">
+      <DependentUpon>AdminApproval.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarLotApp.resx">
       <DependentUpon>CarLotApp.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +131,9 @@
       <Project>{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}</Project>
       <Name>Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_warning.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

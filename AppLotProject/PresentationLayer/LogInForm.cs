@@ -17,7 +17,7 @@ namespace PresentationLayer
     public partial class LogInForm : Form
     {
         public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
-        public static List<Employee> employees = employeeBusiness.GetAllEmployees();
+        public static List<Employee> employees;
         public LogInForm()
         {
             
@@ -55,7 +55,8 @@ namespace PresentationLayer
 
         private void btnLogIn_MouseClick(object sender, MouseEventArgs e)
         {
-            if(textBoxUsername.Text =="" || textBoxPassword.Text == "" 
+            employees = employeeBusiness.GetAllEmployees();
+            if (textBoxUsername.Text =="" || textBoxPassword.Text == "" 
                 || textBoxUsername.Text =="Enter your username:" || textBoxPassword.Text =="Enter the password")
             {
                 MessageBox.Show("All fields must be filled. Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
