@@ -81,10 +81,9 @@ namespace PresentationLayer
             else
             {
                 //TO-DO: Admin password dialog; not all users are allowed to add new employees
-                new AdminApproval().Show();
-                MessageBox.Show("New employee added successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                employeeBusiness.InsertEmployee(emp); 
-                
+                AdminApproval adminForm = new AdminApproval(emp);
+                adminForm.Show();
+                this.Close();
             }
         }
 
