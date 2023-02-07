@@ -80,7 +80,6 @@ namespace PresentationLayer
             //finally creating new employee in database
             else
             {
-                //TO-DO: Admin password dialog; not all users are allowed to add new employees
                 AdminApproval adminForm = new AdminApproval(emp);
                 adminForm.Show();
                 this.Close();
