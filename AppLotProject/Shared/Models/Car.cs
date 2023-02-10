@@ -19,7 +19,8 @@ namespace Shared.Models
         public string Fuel { get; set; }
         public string Color { get; set; }
         public string Description { get; set; }
-        public float Price { get; set; }
+        public double Price { get; set; }
         public string Condition { get; set; }
+        public string Status { get; set; }
     }
 }

@@ -37,8 +37,9 @@ namespace DataAccessLayer
                         Transmission = sqlDataReader.GetString(8),
                         Color = sqlDataReader.GetString(9),
                         Description = sqlDataReader.GetString(10),
-                        Price = sqlDataReader.GetFloat(11),
-                        Condition = sqlDataReader.GetString(11)
+                        Price = sqlDataReader.GetDouble(11),
+                        Condition = sqlDataReader.GetString(12),
+                        Status = sqlDataReader.GetString(13)
                     };
                     cars.Add(car);
                 }

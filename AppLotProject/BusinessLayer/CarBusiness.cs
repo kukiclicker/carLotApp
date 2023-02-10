@@ -11,7 +11,10 @@ namespace BusinessLayer
     public class CarBusiness
     {
         public static CarRepository carRepository = new CarRepository();
-
+        public List<Car> GetAvailableCars()
+        {
+            return carRepository.GetAllCars().Where(x=>x.Status.Contains("available")).ToList();
+        }
         public List<Car> GetAllCars()
         {
             return carRepository.GetAllCars();

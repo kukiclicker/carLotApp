@@ -38,12 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonModel = new System.Windows.Forms.RadioButton();
+            this.radioButtonYear = new System.Windows.Forms.RadioButton();
+            this.radioButtonMileage = new System.Windows.Forms.RadioButton();
+            this.radioButtonPrice = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableCars)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,8 +88,8 @@
             this.makeApointmentToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makeApointmentToolStripMenuItem.Name = "makeApointmentToolStripMenuItem";
             this.makeApointmentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.makeApointmentToolStripMenuItem.Size = new System.Drawing.Size(199, 39);
-            this.makeApointmentToolStripMenuItem.Text = "Make appointment";
+            this.makeApointmentToolStripMenuItem.Size = new System.Drawing.Size(136, 39);
+            this.makeApointmentToolStripMenuItem.Text = "Test drive";
             // 
             // dataGridViewAvailableCars
             // 
@@ -144,70 +146,71 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Sort cars:";
             // 
-            // radioButton1
+            // radioButtonModel
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.Snow;
-            this.radioButton1.Location = new System.Drawing.Point(11, 40);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 19);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "by Model";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButtonModel.AutoSize = true;
+            this.radioButtonModel.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonModel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonModel.ForeColor = System.Drawing.Color.Snow;
+            this.radioButtonModel.Location = new System.Drawing.Point(11, 40);
+            this.radioButtonModel.Name = "radioButtonModel";
+            this.radioButtonModel.Size = new System.Drawing.Size(75, 19);
+            this.radioButtonModel.TabIndex = 6;
+            this.radioButtonModel.TabStop = true;
+            this.radioButtonModel.Text = "by Model";
+            this.radioButtonModel.UseVisualStyleBackColor = false;
+            this.radioButtonModel.CheckedChanged += new System.EventHandler(this.radioButtonModel_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonYear
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Snow;
-            this.radioButton2.Location = new System.Drawing.Point(11, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 19);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "by Year";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButtonYear.AutoSize = true;
+            this.radioButtonYear.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonYear.ForeColor = System.Drawing.Color.Snow;
+            this.radioButtonYear.Location = new System.Drawing.Point(11, 75);
+            this.radioButtonYear.Name = "radioButtonYear";
+            this.radioButtonYear.Size = new System.Drawing.Size(63, 19);
+            this.radioButtonYear.TabIndex = 7;
+            this.radioButtonYear.TabStop = true;
+            this.radioButtonYear.Text = "by Year";
+            this.radioButtonYear.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // radioButtonMileage
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.Snow;
-            this.radioButton3.Location = new System.Drawing.Point(11, 109);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(113, 19);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "by Manufacturer";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.radioButtonMileage.AutoSize = true;
+            this.radioButtonMileage.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMileage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMileage.ForeColor = System.Drawing.Color.Snow;
+            this.radioButtonMileage.Location = new System.Drawing.Point(11, 109);
+            this.radioButtonMileage.Name = "radioButtonMileage";
+            this.radioButtonMileage.Size = new System.Drawing.Size(83, 19);
+            this.radioButtonMileage.TabIndex = 8;
+            this.radioButtonMileage.TabStop = true;
+            this.radioButtonMileage.Text = "by Mileage";
+            this.radioButtonMileage.UseVisualStyleBackColor = false;
             // 
-            // radioButton4
+            // radioButtonPrice
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.ForeColor = System.Drawing.Color.Snow;
-            this.radioButton4.Location = new System.Drawing.Point(11, 146);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(67, 19);
-            this.radioButton4.TabIndex = 9;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "by Price";
-            this.radioButton4.UseVisualStyleBackColor = false;
+            this.radioButtonPrice.AutoSize = true;
+            this.radioButtonPrice.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPrice.ForeColor = System.Drawing.Color.Snow;
+            this.radioButtonPrice.Location = new System.Drawing.Point(11, 146);
+            this.radioButtonPrice.Name = "radioButtonPrice";
+            this.radioButtonPrice.Size = new System.Drawing.Size(67, 19);
+            this.radioButtonPrice.TabIndex = 9;
+            this.radioButtonPrice.TabStop = true;
+            this.radioButtonPrice.Text = "by Price";
+            this.radioButtonPrice.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.radioButtonPrice);
+            this.panel1.Controls.Add(this.radioButtonMileage);
+            this.panel1.Controls.Add(this.radioButtonYear);
+            this.panel1.Controls.Add(this.radioButtonModel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(10, 192);
             this.panel1.Name = "panel1";
@@ -226,13 +229,41 @@
             this.panel2.Size = new System.Drawing.Size(258, 63);
             this.panel2.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(377, 433);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Sell Car";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Snow;
+            this.button2.Location = new System.Drawing.Point(625, 436);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Test Drive";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // CarLotApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 473);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -267,11 +298,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButtonModel;
+        private System.Windows.Forms.RadioButton radioButtonYear;
+        private System.Windows.Forms.RadioButton radioButtonMileage;
+        private System.Windows.Forms.RadioButton radioButtonPrice;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
