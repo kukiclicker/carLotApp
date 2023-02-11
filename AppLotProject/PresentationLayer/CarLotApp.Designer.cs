@@ -34,7 +34,7 @@
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makeApointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAvailableCars = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -96,19 +96,20 @@
             this.dataGridViewAvailableCars.BackgroundColor = System.Drawing.Color.SaddleBrown;
             this.dataGridViewAvailableCars.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewAvailableCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAvailableCars.Location = new System.Drawing.Point(278, 111);
+            this.dataGridViewAvailableCars.Location = new System.Drawing.Point(290, 111);
             this.dataGridViewAvailableCars.Name = "dataGridViewAvailableCars";
-            this.dataGridViewAvailableCars.Size = new System.Drawing.Size(497, 316);
+            this.dataGridViewAvailableCars.Size = new System.Drawing.Size(485, 316);
             this.dataGridViewAvailableCars.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 22);
-            this.textBox1.TabIndex = 2;
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(12, 30);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(227, 22);
+            this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // label1
             // 
@@ -222,11 +223,11 @@
             this.panel2.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBoxSearch);
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(9, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 63);
+            this.panel2.Size = new System.Drawing.Size(262, 63);
             this.panel2.TabIndex = 11;
             // 
             // button1
@@ -294,7 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem makeApointmentToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewAvailableCars;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

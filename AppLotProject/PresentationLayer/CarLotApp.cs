@@ -50,7 +50,10 @@ namespace PresentationLayer
             }
 
         }
-
-       
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            //TO-DO implement search to take more arguments
+            dataGridViewAvailableCars.DataSource = carBusiness.FindCars(textBoxSearch.Text.ToLower());
+        }
     }
 }
