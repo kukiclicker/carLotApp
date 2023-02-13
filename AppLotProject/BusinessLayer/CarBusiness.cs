@@ -13,7 +13,7 @@ namespace BusinessLayer
         public static CarRepository carRepository = new CarRepository();
         public List<Car> GetAvailableCars()
         {
-            return carRepository.GetAllCars().Where(x=>x.Status.Contains("available")).ToList();
+            return carRepository.GetAllCars().Where(x => x.Status.Contains("available")).ToList();
         }
         public List<Car> GetAllCars()
         {
@@ -30,6 +30,14 @@ namespace BusinessLayer
         public int DeleteCar(int carID)
         {
             return carRepository.DeleteCar(carID);
+        }
+        public int SellCar(int carID)
+        {
+            return carRepository.SellCar(carID);
+        }
+        public int LoanCar(int carID)
+        {
+            return carRepository.LoanCar(carID);
         }
         public List<Car>FindCars(string query)
         {

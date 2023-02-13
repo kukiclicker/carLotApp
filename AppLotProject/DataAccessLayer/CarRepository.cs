@@ -117,5 +117,33 @@ namespace DataAccessLayer
 
             }
         }
+        public int SellCar(int carID)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "UPDATE CARS SET status = 'SOLD' WHERE CarID = "+carID;
+                    return sqlCommand.ExecuteNonQuery();
+                }
+               
+            }
+        }
+        public int LoanCar(int carID)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand())
+                {
+                    sqlCommand.Connection = sqlConnection;
+                    sqlCommand.CommandText = "UPDATE CARS SET status = 'LOANED' WHERE CarID = " + carID;
+                    return sqlCommand.ExecuteNonQuery();
+                }
+
+            }
+        }
     }
 }

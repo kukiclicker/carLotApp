@@ -36,7 +36,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.makeApointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAvailableCars = new System.Windows.Forms.DataGridView();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,13 +55,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonSellCar = new System.Windows.Forms.Button();
-            this.buttonTestDrive = new System.Windows.Forms.Button();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonLoanCar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableCars)).BeginInit();
             this.panel1.SuspendLayout();
@@ -102,6 +102,12 @@
             this.addCarToolStripMenuItem.Text = "Car";
             this.addCarToolStripMenuItem.Visible = false;
             // 
+            // addCarToolStripMenuItem1
+            // 
+            this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(130, 24);
+            this.addCarToolStripMenuItem1.Text = "Add car";
+            // 
             // makeApointmentToolStripMenuItem
             // 
             this.makeApointmentToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +115,46 @@
             this.makeApointmentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
             this.makeApointmentToolStripMenuItem.Size = new System.Drawing.Size(136, 39);
             this.makeApointmentToolStripMenuItem.Text = "Test drive";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeToolStripMenuItem,
+            this.deleteEmployeeToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 39);
+            this.toolStripMenuItem1.Text = "Employee";
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+            this.addEmployeeToolStripMenuItem.Text = "Add employee";
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete employee";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(124, 39);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(72, 39);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // dataGridViewAvailableCars
             // 
@@ -304,66 +350,21 @@
             this.buttonSellCar.Visible = false;
             this.buttonSellCar.Click += new System.EventHandler(this.buttonSellCar_Click);
             // 
-            // buttonTestDrive
+            // buttonLoanCar
             // 
-            this.buttonTestDrive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTestDrive.BackColor = System.Drawing.Color.SaddleBrown;
-            this.buttonTestDrive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTestDrive.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTestDrive.ForeColor = System.Drawing.Color.Snow;
-            this.buttonTestDrive.Location = new System.Drawing.Point(625, 436);
-            this.buttonTestDrive.Name = "buttonTestDrive";
-            this.buttonTestDrive.Size = new System.Drawing.Size(75, 30);
-            this.buttonTestDrive.TabIndex = 13;
-            this.buttonTestDrive.Text = "Test Drive";
-            this.buttonTestDrive.UseVisualStyleBackColor = false;
-            this.buttonTestDrive.Visible = false;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEmployeeToolStripMenuItem,
-            this.deleteEmployeeToolStripMenuItem});
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 39);
-            this.toolStripMenuItem1.Text = "Employee";
-            // 
-            // addEmployeeToolStripMenuItem
-            // 
-            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
-            this.addEmployeeToolStripMenuItem.Text = "Add employee";
-            // 
-            // deleteEmployeeToolStripMenuItem
-            // 
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete employee";
-            // 
-            // addCarToolStripMenuItem1
-            // 
-            this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
-            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
-            this.addCarToolStripMenuItem1.Text = "Add car";
-            // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(124, 39);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(72, 39);
-            this.logOutToolStripMenuItem.Text = "Log out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            this.buttonLoanCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLoanCar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonLoanCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoanCar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoanCar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonLoanCar.Location = new System.Drawing.Point(625, 436);
+            this.buttonLoanCar.Name = "buttonLoanCar";
+            this.buttonLoanCar.Size = new System.Drawing.Size(96, 30);
+            this.buttonLoanCar.TabIndex = 13;
+            this.buttonLoanCar.Text = "Loan car";
+            this.buttonLoanCar.UseVisualStyleBackColor = false;
+            this.buttonLoanCar.Visible = false;
+            this.buttonLoanCar.Click += new System.EventHandler(this.buttonLoanCar_Click);
             // 
             // CarLotApp
             // 
@@ -372,7 +373,7 @@
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 473);
-            this.Controls.Add(this.buttonTestDrive);
+            this.Controls.Add(this.buttonLoanCar);
             this.Controls.Add(this.buttonSellCar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -415,7 +416,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonSellCar;
-        private System.Windows.Forms.Button buttonTestDrive;
+        private System.Windows.Forms.Button buttonLoanCar;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;

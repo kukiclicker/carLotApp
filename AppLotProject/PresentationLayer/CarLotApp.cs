@@ -17,7 +17,7 @@ namespace PresentationLayer
     {
         public static Employee loggedUser;
         public static CarBusiness carBusiness = new CarBusiness();
-        public static BindingList<Car> cars = new BindingList<Car>(carBusiness.GetAllCars());
+        public static BindingList<Car> cars = new BindingList<Car>(carBusiness.GetAvailableCars());
         DataGridViewRow selectedRow;
         public CarLotApp(Employee emp)
         {
@@ -35,12 +35,12 @@ namespace PresentationLayer
             {
                 case "administrator":
                     buttonSellCar.Visible = true;
-                    buttonTestDrive.Visible = true;
+                    buttonLoanCar.Visible = true;
                     addCarToolStripMenuItem.Visible = true; 
                     break;
                 case "car sales":
                     buttonSellCar.Visible = true;
-                    buttonTestDrive.Visible = true;
+                    buttonLoanCar.Visible = true;
                     addCarToolStripMenuItem.Visible = true;
                     break;
                 //more roles to be defined... 
@@ -100,11 +100,23 @@ namespace PresentationLayer
 
         private void buttonSellCar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() + selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                //TO-DO: implement sell function
-                
+                carBusiness.SellCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
+                cars = new BindingList<Car>(carBusiness.GetAvailableCars());
+                dataGridViewAvailableCars.DataSource = cars;
+            }
+        }
+
+        private void buttonLoanCar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you loan " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                carBusiness.LoanCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
+                cars = new BindingList<Car>(carBusiness.GetAvailableCars());
+                dataGridViewAvailableCars.DataSource = cars;
             }
         }
     }
