@@ -15,6 +15,7 @@ namespace PresentationLayer
     public partial class Registration : Form
     {
         public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
+        public static List<Employee> employees;
         public Registration()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace PresentationLayer
 
         private void btnAddEmployee_MouseClick(object sender, MouseEventArgs e)
         {
+            employees = employeeBusiness.GetAllEmployees();
             //creating a new employee from the form
             Employee emp = new Employee
             {
@@ -70,12 +72,24 @@ namespace PresentationLayer
             {
                 MessageBox.Show("All fields must be filled!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //checking if password is shorter then 6 char
+            else if(textBoxPassword.Text.Length <6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPassword.ForeColor = Color.Red;
+            }
             //checking if passwords match
             else if(!textBoxPassword.Text.Equals(textBoxConfirmPassword.Text))
             {
                 MessageBox.Show("Passwords doesnt match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxPassword.ForeColor = Color.Red;
                 textBoxConfirmPassword.ForeColor = Color.Red;
+            }
+            //checking if employee with that username already exist in database
+            else if(employees.Any(x=>x.UserName == emp.UserName))
+            {
+                MessageBox.Show("User with that username already exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             //finally creating new employee in database
             else
@@ -105,16 +119,6 @@ namespace PresentationLayer
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             textBoxPassword.ForeColor = Color.SaddleBrown;
-        }
-
-        private void btnAddEmployee_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Registration_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

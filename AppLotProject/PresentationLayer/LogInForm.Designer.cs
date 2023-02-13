@@ -120,7 +120,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "ADD EMPLOYEE";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnRegister_MouseClick);
             // 
             // btnLogIn
             // 
@@ -133,7 +133,6 @@
             this.btnLogIn.TabIndex = 3;
             this.btnLogIn.Text = "LOG IN";
             this.btnLogIn.UseVisualStyleBackColor = false;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             this.btnLogIn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnLogIn_MouseClick);
             // 
             // btnX
@@ -189,7 +188,6 @@
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car lot app ";
-            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

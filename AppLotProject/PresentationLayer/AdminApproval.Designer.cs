@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(196, 259);
+            this.button1.Location = new System.Drawing.Point(158, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -66,7 +66,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 15);
+            this.label3.Location = new System.Drawing.Point(3, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(290, 40);
             this.label3.TabIndex = 3;
@@ -77,9 +77,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(135, 21);
+            this.panel1.Location = new System.Drawing.Point(113, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 79);
+            this.panel1.Size = new System.Drawing.Size(288, 79);
             this.panel1.TabIndex = 4;
             // 
             // textBoxUsername
@@ -98,6 +98,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(257, 25);
             this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -134,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(484, 294);
+            this.ClientSize = new System.Drawing.Size(407, 280);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);

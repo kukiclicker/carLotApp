@@ -133,7 +133,6 @@
             this.btnAddEmployee.TabIndex = 5;
             this.btnAddEmployee.Text = "CREATE";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             this.btnAddEmployee.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddEmployee_MouseClick);
             // 
             // panel1
@@ -345,7 +344,8 @@
             "Car Detailer",
             "Lot Manager",
             "Property Maintenance",
-            "HR Consultant"});
+            "HR Consultant",
+            "Auto Sales"});
             this.comboBoxRole.Location = new System.Drawing.Point(162, 358);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(145, 25);
@@ -456,7 +456,6 @@
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
-            this.Load += new System.EventHandler(this.Registration_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

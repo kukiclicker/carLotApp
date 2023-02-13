@@ -20,12 +20,10 @@ namespace PresentationLayer
         public static List<Employee> employees;
         public LogInForm()
         {
-            
             InitializeComponent();
             this.AcceptButton = btnLogIn;
-            
         }
-
+        //X button for closing application
         private void btnX_MouseClick(object sender, MouseEventArgs e)
         {
             this.Close();
@@ -39,7 +37,7 @@ namespace PresentationLayer
         {
             btnX.ForeColor = Color.Black;
         }
-
+        //cleaning password textbox from placeholder text 
         private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
         {
             textBoxPassword.Text = "";
@@ -63,6 +61,7 @@ namespace PresentationLayer
             }
             else
             {
+                //checking if employee with inserted credentials exists in database
                 if(employees.Where(emp => emp.UserName.Equals(textBoxUsername.Text) && emp.Password.Equals(textBoxPassword.Text)).Count()==0)
                 {
                     MessageBox.Show("Incorrect username or password.Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,28 +70,20 @@ namespace PresentationLayer
                 {
                     MessageBox.Show("Login successful!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    new CarLotApp().Show();
+                    Employee loggedEmployee = (Employee)employees.Where(emp => emp.UserName.Equals(textBoxUsername.Text)).FirstOrDefault();
+                    //running main application form
+                    new CarLotApp(loggedEmployee).Show();
                 }
 
             }
         }
-
-        private void button2_MouseClick(object sender, MouseEventArgs e)
+        //running register form on click of the button 
+        private void btnRegister_MouseClick(object sender, MouseEventArgs e)
         {
-         
             new Registration().Show();
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogInForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //making password visible/invisible
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             textBoxPassword.UseSystemPasswordChar = checkBoxShowPassword.Checked ? false : true;

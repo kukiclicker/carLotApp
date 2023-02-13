@@ -36,8 +36,12 @@ namespace PresentationLayer
 
         private void buttonConfirm_MouseClick(object sender, MouseEventArgs e)
         {
-            Employee admin = (Employee)employees.Where(x => x.UserName == textBoxUsername.Text).First();
-            if(admin.Password == textBoxPassword.Text && admin.Role.ToLower() =="admin"|| admin.Role.ToLower() == "administrator")
+            Employee admin = (Employee)employees.Where(x => x.UserName == textBoxUsername.Text).FirstOrDefault();
+            if (admin == null)
+            {
+                MessageBox.Show("User doesnt exist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (admin.Password == textBoxPassword.Text && admin.Role.ToLower() =="admin"|| admin.Role.ToLower() == "administrator")
             {
                 employeeBusiness.InsertEmployee(newEmployee);
                 MessageBox.Show("New employee added successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

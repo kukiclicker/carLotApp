@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarLotApp));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +48,14 @@
             this.radioButtonPrice = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSellCar = new System.Windows.Forms.Button();
+            this.buttonTestDrive = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableCars)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,13 +65,19 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.addCarToolStripMenuItem,
-            this.makeApointmentToolStripMenuItem});
+            this.makeApointmentToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.reportsToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 43);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStripMainMenu";
             // 
@@ -77,11 +93,14 @@
             // 
             // addCarToolStripMenuItem
             // 
+            this.addCarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCarToolStripMenuItem1});
             this.addCarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
             this.addCarToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(127, 39);
-            this.addCarToolStripMenuItem.Text = "Add Car";
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(95, 39);
+            this.addCarToolStripMenuItem.Text = "Car";
+            this.addCarToolStripMenuItem.Visible = false;
             // 
             // makeApointmentToolStripMenuItem
             // 
@@ -93,13 +112,48 @@
             // 
             // dataGridViewAvailableCars
             // 
+            this.dataGridViewAvailableCars.AllowUserToAddRows = false;
+            this.dataGridViewAvailableCars.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Snow;
+            this.dataGridViewAvailableCars.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewAvailableCars.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewAvailableCars.BackgroundColor = System.Drawing.Color.SaddleBrown;
-            this.dataGridViewAvailableCars.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewAvailableCars.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewAvailableCars.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAvailableCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAvailableCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAvailableCars.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewAvailableCars.GridColor = System.Drawing.Color.SaddleBrown;
             this.dataGridViewAvailableCars.Location = new System.Drawing.Point(290, 111);
             this.dataGridViewAvailableCars.Name = "dataGridViewAvailableCars";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAvailableCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewAvailableCars.Size = new System.Drawing.Size(485, 316);
             this.dataGridViewAvailableCars.TabIndex = 1;
+            this.dataGridViewAvailableCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAvailableCars_CellClick);
             // 
             // textBoxSearch
             // 
@@ -125,11 +179,12 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(449, 52);
+            this.label2.Location = new System.Drawing.Point(457, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 37);
             this.label2.TabIndex = 4;
@@ -160,7 +215,7 @@
             this.radioButtonModel.TabStop = true;
             this.radioButtonModel.Text = "by Model";
             this.radioButtonModel.UseVisualStyleBackColor = false;
-            this.radioButtonModel.CheckedChanged += new System.EventHandler(this.radioButtonModel_CheckedChanged);
+            this.radioButtonModel.Click += new System.EventHandler(this.radioButtonModel_Click);
             // 
             // radioButtonYear
             // 
@@ -175,6 +230,7 @@
             this.radioButtonYear.TabStop = true;
             this.radioButtonYear.Text = "by Year";
             this.radioButtonYear.UseVisualStyleBackColor = false;
+            this.radioButtonYear.Click += new System.EventHandler(this.radioButtonYear_Click);
             // 
             // radioButtonMileage
             // 
@@ -189,6 +245,7 @@
             this.radioButtonMileage.TabStop = true;
             this.radioButtonMileage.Text = "by Mileage";
             this.radioButtonMileage.UseVisualStyleBackColor = false;
+            this.radioButtonMileage.Click += new System.EventHandler(this.radioButtonMileage_Click);
             // 
             // radioButtonPrice
             // 
@@ -203,6 +260,7 @@
             this.radioButtonPrice.TabStop = true;
             this.radioButtonPrice.Text = "by Price";
             this.radioButtonPrice.UseVisualStyleBackColor = false;
+            this.radioButtonPrice.Click += new System.EventHandler(this.radioButtonPrice_Click);
             // 
             // panel1
             // 
@@ -230,31 +288,82 @@
             this.panel2.Size = new System.Drawing.Size(262, 63);
             this.panel2.TabIndex = 11;
             // 
-            // button1
+            // buttonSellCar
             // 
-            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(377, 433);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Sell Car";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSellCar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSellCar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSellCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSellCar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSellCar.ForeColor = System.Drawing.Color.Snow;
+            this.buttonSellCar.Location = new System.Drawing.Point(377, 433);
+            this.buttonSellCar.Name = "buttonSellCar";
+            this.buttonSellCar.Size = new System.Drawing.Size(75, 33);
+            this.buttonSellCar.TabIndex = 12;
+            this.buttonSellCar.Text = "Sell Car";
+            this.buttonSellCar.UseVisualStyleBackColor = false;
+            this.buttonSellCar.Visible = false;
+            this.buttonSellCar.Click += new System.EventHandler(this.buttonSellCar_Click);
             // 
-            // button2
+            // buttonTestDrive
             // 
-            this.button2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Snow;
-            this.button2.Location = new System.Drawing.Point(625, 436);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Test Drive";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonTestDrive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTestDrive.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonTestDrive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTestDrive.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTestDrive.ForeColor = System.Drawing.Color.Snow;
+            this.buttonTestDrive.Location = new System.Drawing.Point(625, 436);
+            this.buttonTestDrive.Name = "buttonTestDrive";
+            this.buttonTestDrive.Size = new System.Drawing.Size(75, 30);
+            this.buttonTestDrive.TabIndex = 13;
+            this.buttonTestDrive.Text = "Test Drive";
+            this.buttonTestDrive.UseVisualStyleBackColor = false;
+            this.buttonTestDrive.Visible = false;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeToolStripMenuItem,
+            this.deleteEmployeeToolStripMenuItem});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 39);
+            this.toolStripMenuItem1.Text = "Employee";
+            // 
+            // addEmployeeToolStripMenuItem
+            // 
+            this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+            this.addEmployeeToolStripMenuItem.Text = "Add employee";
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete employee";
+            // 
+            // addCarToolStripMenuItem1
+            // 
+            this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.addCarToolStripMenuItem1.Text = "Add car";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(124, 39);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(72, 39);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // CarLotApp
             // 
@@ -263,8 +372,8 @@
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 473);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonTestDrive);
+            this.Controls.Add(this.buttonSellCar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -305,7 +414,13 @@
         private System.Windows.Forms.RadioButton radioButtonPrice;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSellCar;
+        private System.Windows.Forms.Button buttonTestDrive;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
