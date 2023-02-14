@@ -105,7 +105,7 @@
             // addCarToolStripMenuItem1
             // 
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
-            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(130, 24);
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
             // 
             // makeApointmentToolStripMenuItem
@@ -132,6 +132,7 @@
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
             this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.addEmployeeToolStripMenuItem.Text = "Add employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
             // 

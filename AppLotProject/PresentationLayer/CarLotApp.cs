@@ -119,5 +119,10 @@ namespace PresentationLayer
                 dataGridViewAvailableCars.DataSource = cars;
             }
         }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Registration().Show();
+        }
     }
 }
