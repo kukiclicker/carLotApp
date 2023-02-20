@@ -129,5 +129,10 @@ namespace PresentationLayer
         {
             new DeleteEmployee().Show();
         }
+
+        private void addCarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new AddCar().Show();
+        }
     }
 }

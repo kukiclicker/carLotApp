@@ -111,6 +111,7 @@
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
             this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
+            this.addCarToolStripMenuItem1.Click += new System.EventHandler(this.addCarToolStripMenuItem1_Click);
             // 
             // makeApointmentToolStripMenuItem
             // 
