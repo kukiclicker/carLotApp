@@ -93,9 +93,11 @@
             // 
             // addCarToolStripMenuItem
             // 
+            this.addCarToolStripMenuItem.BackColor = System.Drawing.Color.SaddleBrown;
             this.addCarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCarToolStripMenuItem1});
             this.addCarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCarToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
             this.addCarToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
             this.addCarToolStripMenuItem.Size = new System.Drawing.Size(95, 39);
@@ -104,6 +106,8 @@
             // 
             // addCarToolStripMenuItem1
             // 
+            this.addCarToolStripMenuItem1.BackColor = System.Drawing.Color.Sienna;
+            this.addCarToolStripMenuItem1.ForeColor = System.Drawing.Color.Snow;
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
             this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
@@ -129,6 +133,8 @@
             // 
             // addEmployeeToolStripMenuItem
             // 
+            this.addEmployeeToolStripMenuItem.BackColor = System.Drawing.Color.Sienna;
+            this.addEmployeeToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
             this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.addEmployeeToolStripMenuItem.Text = "Add employee";
@@ -136,9 +142,12 @@
             // 
             // deleteEmployeeToolStripMenuItem
             // 
+            this.deleteEmployeeToolStripMenuItem.BackColor = System.Drawing.Color.Sienna;
+            this.deleteEmployeeToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
             this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.deleteEmployeeToolStripMenuItem.Text = "Delete employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 

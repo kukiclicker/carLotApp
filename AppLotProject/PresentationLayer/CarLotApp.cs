@@ -124,5 +124,10 @@ namespace PresentationLayer
         {
             new Registration().Show();
         }
+
+        private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new DeleteEmployee().Show();
+        }
     }
 }

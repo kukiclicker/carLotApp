@@ -30,3 +30,4 @@ C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\bin\Debug\DataA
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.Registration.resources
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.AdminApproval.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.DeleteEmployee.resources
