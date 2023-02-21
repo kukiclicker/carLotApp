@@ -17,6 +17,8 @@ namespace PresentationLayer
     {
         public static Employee loggedUser;
         public static CarBusiness carBusiness = new CarBusiness();
+        public static SaleBusiness saleBusiness = new SaleBusiness();
+        public static CustomerBusiness customerBusiness = new CustomerBusiness();
         public static BindingList<Car> cars = new BindingList<Car>(carBusiness.GetAvailableCars());
         DataGridViewRow selectedRow;
         public CarLotApp(Employee emp)
@@ -98,10 +100,13 @@ namespace PresentationLayer
         }
         private void buttonSellCar_Click(object sender, EventArgs e)
         {
+            int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString());
+            MessageBox.Show("Debug "+ loggedUser.EmployeeID, "Debug", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                carBusiness.SellCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
+                new AddCustomer(carID, loggedUser.EmployeeID).ShowDialog();
+                carBusiness.SellCar(carID);
                 refreshDataGrid();
             }
         }

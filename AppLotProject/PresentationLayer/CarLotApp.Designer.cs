@@ -37,7 +37,6 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeApointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +68,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.addCarToolStripMenuItem,
-            this.makeApointmentToolStripMenuItem,
             this.toolStripMenuItem1,
             this.reportsToolStripMenuItem,
             this.logOutToolStripMenuItem});
@@ -109,17 +107,9 @@
             this.addCarToolStripMenuItem1.BackColor = System.Drawing.Color.Sienna;
             this.addCarToolStripMenuItem1.ForeColor = System.Drawing.Color.Snow;
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
-            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(130, 24);
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
             this.addCarToolStripMenuItem1.Click += new System.EventHandler(this.addCarToolStripMenuItem1_Click);
-            // 
-            // makeApointmentToolStripMenuItem
-            // 
-            this.makeApointmentToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.makeApointmentToolStripMenuItem.Name = "makeApointmentToolStripMenuItem";
-            this.makeApointmentToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.makeApointmentToolStripMenuItem.Size = new System.Drawing.Size(136, 39);
-            this.makeApointmentToolStripMenuItem.Text = "Test drive";
             // 
             // toolStripMenuItem1
             // 
@@ -415,7 +405,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem makeApointmentToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewAvailableCars;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label1;
