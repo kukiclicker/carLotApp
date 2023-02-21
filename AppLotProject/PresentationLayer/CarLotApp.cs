@@ -100,8 +100,8 @@ namespace PresentationLayer
         }
         private void buttonSellCar_Click(object sender, EventArgs e)
         {
-            int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString());
-            MessageBox.Show("Debug "+ loggedUser.EmployeeID, "Debug", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString().Trim());
+            //MessageBox.Show("Debug "+ carID, "Debug", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
