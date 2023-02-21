@@ -70,8 +70,7 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "INSERT INTO CARS VALUES (@CarID,@Model,@Type,@Year,@CarBody,@Fuel,@Milage,@Engine,@Transmission,@Color,@Description,@Price,@Condition)";
-                    sqlCommand.Parameters.AddWithValue("@CarID", car.CarID);
+                    sqlCommand.CommandText = "INSERT INTO CARS VALUES (@Model,@Type,@Year,@CarBody,@Fuel,@Mileage,@Engine,@Transmission,@Color,@Description,@Price,@Condition,@status)";
                     sqlCommand.Parameters.AddWithValue("@Model", car.Model);
                     sqlCommand.Parameters.AddWithValue("@Type", car.Type);
                     sqlCommand.Parameters.AddWithValue("@Year", car.Year);
@@ -84,7 +83,7 @@ namespace DataAccessLayer
                     sqlCommand.Parameters.AddWithValue("@Description", car.Description);
                     sqlCommand.Parameters.AddWithValue("@Price", car.Price);
                     sqlCommand.Parameters.AddWithValue("@Condition", car.Condition);
-
+                    sqlCommand.Parameters.AddWithValue("@status", car.Status);
                     return sqlCommand.ExecuteNonQuery();
                 }
             }

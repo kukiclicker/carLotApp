@@ -109,7 +109,7 @@
             this.addCarToolStripMenuItem1.BackColor = System.Drawing.Color.Sienna;
             this.addCarToolStripMenuItem1.ForeColor = System.Drawing.Color.Snow;
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
-            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(130, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
             this.addCarToolStripMenuItem1.Click += new System.EventHandler(this.addCarToolStripMenuItem1_Click);
             // 
@@ -397,6 +397,7 @@
             this.Name = "CarLotApp";
             this.Text = "Car lot ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CarLotApp_FormClosed);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CarLotApp_MouseClick);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableCars)).EndInit();

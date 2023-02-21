@@ -85,7 +85,6 @@ namespace PresentationLayer
             this.Hide();
             logInForm.ShowDialog();
         }
-
         private void dataGridViewAvailableCars_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //getting selected rows
@@ -97,29 +96,24 @@ namespace PresentationLayer
             }
 
         }
-
         private void buttonSellCar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 carBusiness.SellCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
-                cars = new BindingList<Car>(carBusiness.GetAvailableCars());
-                dataGridViewAvailableCars.DataSource = cars;
+                refreshDataGrid();
             }
         }
-
         private void buttonLoanCar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you loan " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 carBusiness.LoanCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
-                cars = new BindingList<Car>(carBusiness.GetAvailableCars());
-                dataGridViewAvailableCars.DataSource = cars;
+                refreshDataGrid();
             }
         }
-
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Registration().Show();
@@ -133,6 +127,16 @@ namespace PresentationLayer
         private void addCarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             new AddCar().Show();
+        }
+
+        private void CarLotApp_MouseClick(object sender, MouseEventArgs e)
+        {
+            refreshDataGrid();
+        }
+        private void refreshDataGrid()
+        {
+            cars = new BindingList<Car>(carBusiness.GetAvailableCars());
+            dataGridViewAvailableCars.DataSource = cars;
         }
     }
 }
