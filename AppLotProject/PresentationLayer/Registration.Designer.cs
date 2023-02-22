@@ -131,7 +131,7 @@
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(166, 39);
             this.btnAddEmployee.TabIndex = 5;
-            this.btnAddEmployee.Text = "CREATE";
+            this.btnAddEmployee.Text = "REGISTER";
             this.btnAddEmployee.UseVisualStyleBackColor = false;
             this.btnAddEmployee.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddEmployee_MouseClick);
             // 

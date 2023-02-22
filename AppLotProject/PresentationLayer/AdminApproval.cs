@@ -23,17 +23,6 @@ namespace PresentationLayer
             InitializeComponent();
             this.newEmployee = newEmployee; 
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminApproval_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonConfirm_MouseClick(object sender, MouseEventArgs e)
         {
             Employee admin = (Employee)employees.Where(x => x.UserName == textBoxUsername.Text).FirstOrDefault();

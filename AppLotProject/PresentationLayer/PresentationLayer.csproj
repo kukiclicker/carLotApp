@@ -180,5 +180,23 @@
   <ItemGroup>
     <None Include="Resources\background %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warning-shield-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warning-shield-100%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-2-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

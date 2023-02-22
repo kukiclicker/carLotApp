@@ -44,10 +44,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(158, 245);
+            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(158, 239);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(86, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -67,13 +69,14 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
             this.label3.Location = new System.Drawing.Point(3, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(290, 40);
             this.label3.TabIndex = 3;
             this.label3.Text = "This action requires admin credentials!\r\nPlease enter the required data to contin" +
     "ue.";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+          
             // 
             // panel1
             // 
@@ -105,6 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(20, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 17);
@@ -115,6 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Snow;
             this.label4.Location = new System.Drawing.Point(20, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
@@ -123,10 +128,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.ic_warning;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.warning;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(95, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -135,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(407, 280);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
@@ -150,7 +155,6 @@
             this.Name = "AdminApproval";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirm";
-            this.Load += new System.EventHandler(this.AdminApproval_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

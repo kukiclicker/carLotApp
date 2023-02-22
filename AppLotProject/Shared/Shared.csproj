@@ -58,8 +58,8 @@
     <Content Include="Resources\Pictures\background.png" />
     <Content Include="Resources\Pictures\ic_car.ico" />
     <Content Include="Resources\Pictures\ic_car_80.ico" />
-    <Content Include="Resources\Pictures\ic_warning.jpg" />
     <Content Include="Resources\Pictures\istockphoto-1194980986-612x612.jpg" />
+    <Content Include="Resources\Pictures\warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
