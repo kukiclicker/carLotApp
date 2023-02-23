@@ -43,9 +43,9 @@ namespace DataAccessLayer
                     Sale sale = new Sale
                     {
                         SaleID = sqlDataReader.GetInt32(0),
-                        SaleDate = sqlDataReader.GetString(1),
-                        Employee = sqlDataReader.GetInt32(2),
-                        Car = sqlDataReader.GetInt32(3),
+                        SaleDate = sqlDataReader.GetDateTime(1),
+                        Car = sqlDataReader.GetInt32(2),
+                        Employee = sqlDataReader.GetInt32(3),
                         Customer = sqlDataReader.GetString(4)
 
                     };

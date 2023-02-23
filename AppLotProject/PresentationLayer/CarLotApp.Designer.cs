@@ -34,14 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarLotApp));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewAvailableCars = new System.Windows.Forms.DataGridView();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,28 +65,17 @@
             this.menuStrip1.BackColor = System.Drawing.Color.SaddleBrown;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
             this.addCarToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.reportsToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.salesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStripMainMenu";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
-            this.homeToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(126, 39);
-            this.homeToolStripMenuItem.Text = "Home";
             // 
             // addCarToolStripMenuItem
             // 
@@ -95,10 +83,10 @@
             this.addCarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCarToolStripMenuItem1});
             this.addCarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCarToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.addCarToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
             this.addCarToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(95, 39);
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(95, 44);
             this.addCarToolStripMenuItem.Text = "Car";
             this.addCarToolStripMenuItem.Visible = false;
             // 
@@ -107,7 +95,7 @@
             this.addCarToolStripMenuItem1.BackColor = System.Drawing.Color.Sienna;
             this.addCarToolStripMenuItem1.ForeColor = System.Drawing.Color.Snow;
             this.addCarToolStripMenuItem1.Name = "addCarToolStripMenuItem1";
-            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.addCarToolStripMenuItem1.Size = new System.Drawing.Size(130, 24);
             this.addCarToolStripMenuItem1.Text = "Add car";
             this.addCarToolStripMenuItem1.Click += new System.EventHandler(this.addCarToolStripMenuItem1_Click);
             // 
@@ -117,9 +105,10 @@
             this.addEmployeeToolStripMenuItem,
             this.deleteEmployeeToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Snow;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 39);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(139, 44);
             this.toolStripMenuItem1.Text = "Employee";
             // 
             // addEmployeeToolStripMenuItem
@@ -140,22 +129,25 @@
             this.deleteEmployeeToolStripMenuItem.Text = "Delete employee";
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 0);
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(124, 39);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(72, 39);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(72, 44);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // salesToolStripMenuItem
+            // 
+            this.salesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesToolStripMenuItem.ForeColor = System.Drawing.Color.Snow;
+            this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
+            this.salesToolStripMenuItem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(107, 44);
+            this.salesToolStripMenuItem.Text = "Sales";
+            this.salesToolStripMenuItem.Click += new System.EventHandler(this.salesToolStripMenuItem_Click);
             // 
             // dataGridViewAvailableCars
             // 
@@ -403,7 +395,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridViewAvailableCars;
         private System.Windows.Forms.TextBox textBoxSearch;
@@ -422,7 +413,7 @@
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
     }
 }

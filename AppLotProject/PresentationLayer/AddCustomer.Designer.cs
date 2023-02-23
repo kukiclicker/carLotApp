@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewExistingCustomers = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonSellToExistingCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExistingCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,11 +57,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(66, 26);
+            this.label1.Location = new System.Drawing.Point(25, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 37);
+            this.label1.Size = new System.Drawing.Size(338, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Customer information";
+            this.label1.Text = "New Customer information";
             // 
             // label2
             // 
@@ -145,24 +153,25 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.SaddleBrown;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(156, 325);
+            this.button1.Location = new System.Drawing.Point(107, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(149, 29);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Confirm";
+            this.button1.Text = "Sell to new customer";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
             this.panel1.Controls.Add(this.textBoxPhoneNumber);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBoxLastName);
@@ -171,10 +180,83 @@
             this.panel1.Controls.Add(this.textBoxFirstName);
             this.panel1.Controls.Add(this.textBoxJMBG);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(6, 83);
+            this.panel1.Location = new System.Drawing.Point(12, 83);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 211);
+            this.panel1.Size = new System.Drawing.Size(364, 211);
             this.panel1.TabIndex = 10;
+            // 
+            // dataGridViewExistingCustomers
+            // 
+            this.dataGridViewExistingCustomers.AllowUserToAddRows = false;
+            this.dataGridViewExistingCustomers.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Snow;
+            this.dataGridViewExistingCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewExistingCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewExistingCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewExistingCustomers.BackgroundColor = System.Drawing.Color.SaddleBrown;
+            this.dataGridViewExistingCustomers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewExistingCustomers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewExistingCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewExistingCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewExistingCustomers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewExistingCustomers.GridColor = System.Drawing.Color.SaddleBrown;
+            this.dataGridViewExistingCustomers.Location = new System.Drawing.Point(404, 83);
+            this.dataGridViewExistingCustomers.Name = "dataGridViewExistingCustomers";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewExistingCustomers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewExistingCustomers.Size = new System.Drawing.Size(329, 211);
+            this.dataGridViewExistingCustomers.TabIndex = 11;
+            this.dataGridViewExistingCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewExistingCustomers_CellClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(413, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(320, 37);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Choose existing customer";
+            // 
+            // buttonSellToExistingCustomer
+            // 
+            this.buttonSellToExistingCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSellToExistingCustomer.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonSellToExistingCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSellToExistingCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSellToExistingCustomer.ForeColor = System.Drawing.Color.Snow;
+            this.buttonSellToExistingCustomer.Location = new System.Drawing.Point(490, 325);
+            this.buttonSellToExistingCustomer.Name = "buttonSellToExistingCustomer";
+            this.buttonSellToExistingCustomer.Size = new System.Drawing.Size(160, 29);
+            this.buttonSellToExistingCustomer.TabIndex = 13;
+            this.buttonSellToExistingCustomer.Text = "Sell to existing customer";
+            this.buttonSellToExistingCustomer.UseVisualStyleBackColor = false;
+            this.buttonSellToExistingCustomer.Click += new System.EventHandler(this.btnSellToExistingCustomer_Click);
             // 
             // AddCustomer
             // 
@@ -182,7 +264,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PresentationLayer.Properties.Resources.background__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(409, 378);
+            this.ClientSize = new System.Drawing.Size(745, 378);
+            this.Controls.Add(this.buttonSellToExistingCustomer);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dataGridViewExistingCustomers);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -191,6 +276,7 @@
             this.Text = "AddCustomer";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExistingCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +295,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridViewExistingCustomers;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonSellToExistingCustomer;
     }
 }

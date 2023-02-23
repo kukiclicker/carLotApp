@@ -9,7 +9,7 @@ namespace Shared.Models
     public class Sale
     {
         public int SaleID { get; set; }
-        public string SaleDate { get; set; }
+        public DateTime SaleDate { get; set; }
         public int Employee { get; set;}
         public int Car { get; set;}
         public string Customer { get; set;}

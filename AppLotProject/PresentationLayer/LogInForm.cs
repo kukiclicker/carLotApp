@@ -37,20 +37,6 @@ namespace PresentationLayer
         {
             btnX.ForeColor = Color.Black;
         }
-        //cleaning password textbox from placeholder text 
-        private void textBoxPassword_MouseClick(object sender, MouseEventArgs e)
-        {
-            textBoxPassword.Text = "";
-            textBoxPassword.ForeColor = Color.Snow;
-        }
-
-        private void textBoxUsername_MouseClick(object sender, MouseEventArgs e)
-        {
-            if(textBoxUsername.Text != "" && textBoxUsername.Text.Equals("Enter your username:"))
-                textBoxUsername.Text = "";
-            textBoxUsername.ForeColor = Color.Snow;
-        }
-
         private void btnLogIn_MouseClick(object sender, MouseEventArgs e)
         {
             employees = employeeBusiness.GetAllEmployees();

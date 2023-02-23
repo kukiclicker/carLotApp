@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PresentationLayer
 {
@@ -20,11 +21,13 @@ namespace PresentationLayer
         public static SaleBusiness saleBusiness = new SaleBusiness();
         public static CustomerBusiness customerBusiness = new CustomerBusiness();
         public static BindingList<Car> cars = new BindingList<Car>(carBusiness.GetAvailableCars());
-        DataGridViewRow selectedRow;
+        DataGridViewRow selectedRow=null;
         public CarLotApp(Employee emp)
         {
             loggedUser = emp;
             InitializeComponent();
+            buttonLoanCar.Enabled = false;
+            buttonSellCar.Enabled = false;
             dataGridViewAvailableCars.DataSource= cars;
             menuStrip1.Width = this.Width;
             //calling function to check a role of the user
@@ -95,29 +98,52 @@ namespace PresentationLayer
                 //saving index of selected row and selected row in variables
                 int selectedRowIndex = dataGridViewAvailableCars.SelectedRows[0].Index;
                 selectedRow = dataGridViewAvailableCars.Rows[selectedRowIndex];
+                buttonLoanCar.Enabled = true;
+                buttonSellCar.Enabled = true;
             }
-
+            else
+            {
+                buttonLoanCar.Enabled = false;
+                buttonSellCar.Enabled = false;
+            }
         }
         private void buttonSellCar_Click(object sender, EventArgs e)
         {
-            int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString().Trim());
-            //MessageBox.Show("Debug "+ carID, "Debug", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            try
             {
-                new AddCustomer(carID, loggedUser.EmployeeID).ShowDialog();
-                carBusiness.SellCar(carID);
-                refreshDataGrid();
+                int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString().Trim());
+                DialogResult result = MessageBox.Show("Are you sure you want to sell " + selectedRow.Cells["Model"].Value.ToString() + " " + selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    new AddCustomer(carID, loggedUser.EmployeeID).ShowDialog();
+                    carBusiness.SellCar(carID);
+                    refreshDataGrid();
+                }
             }
+            catch(Exception exc)
+            {
+                MessageBox.Show("You must select car you want to sell!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         private void buttonLoanCar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you loan " + selectedRow.Cells["Model"].Value.ToString() +" "+ selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            
+            try
             {
-                carBusiness.LoanCar(Convert.ToInt32(selectedRow.Cells["CarID"].Value));
-                refreshDataGrid();
+                int carID = Convert.ToInt32(selectedRow.Cells["CarID"].Value.ToString().Trim());
+                DialogResult result = MessageBox.Show("Are you sure you loan " + selectedRow.Cells["Model"].Value.ToString() + " " + selectedRow.Cells["Year"].Value.ToString() + "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    carBusiness.LoanCar(carID);
+                    refreshDataGrid();
+                }
             }
+            catch (Exception exc)
+            {
+                MessageBox.Show("You must select car you want to loan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -142,6 +168,11 @@ namespace PresentationLayer
         {
             cars = new BindingList<Car>(carBusiness.GetAvailableCars());
             dataGridViewAvailableCars.DataSource = cars;
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Sales().ShowDialog();
         }
     }
 }

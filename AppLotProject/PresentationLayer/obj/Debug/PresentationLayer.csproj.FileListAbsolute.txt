@@ -33,3 +33,4 @@ C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\Prese
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.DeleteEmployee.resources
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.AddCar.resources
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.AddCustomer.resources
+C:\Users\umitr\Desktop\carLotApp\AppLotProject\PresentationLayer\obj\Debug\PresentationLayer.Sales.resources

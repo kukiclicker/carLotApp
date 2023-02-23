@@ -19,11 +19,13 @@ namespace PresentationLayer
         public static SaleBusiness saleBusiness = new SaleBusiness();
         public static int carId;
         public static int loggedEmployee;
+        public DataGridViewRow selectedRow;
         public AddCustomer(int carID, int employeeID)
         {
             InitializeComponent();
             carId = carID;
             loggedEmployee = employeeID;
+            dataGridViewExistingCustomers.DataSource = customerBusiness.GetAllCustomers();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,7 +52,7 @@ namespace PresentationLayer
                     };
                     customerBusiness.InsertCustomer(customer);
                     Sale sale = new Sale();
-                    sale.SaleDate = DateTime.Now.ToString();
+                    sale.SaleDate = DateTime.Now;
                     sale.Employee = loggedEmployee;
                     sale.Car = carId;
                     sale.Customer = textBoxJMBG.Text;
@@ -62,11 +64,43 @@ namespace PresentationLayer
             }
             catch (Exception exc)
             {
-
+                MessageBox.Show(""+exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-            
+
+        private void btnSellToExistingCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Customer customer = customerBusiness.GetAllCustomers().Where(x => x.JMBG == selectedRow.Cells["JMBG"].Value.ToString().Trim()).FirstOrDefault();
+                Sale sale = new Sale();
+                sale.SaleDate = DateTime.Now;
+                sale.Employee = loggedEmployee;
+                sale.Car = carId;
+                sale.Customer = customer.JMBG;
+                saleBusiness.InsertSale(sale);
+                MessageBox.Show("Car sold!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("" + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+
+        private void dataGridViewExistingCustomers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewExistingCustomers.SelectedRows.Count > 0)
+            {
+                //saving index of selected row and selected row in variables
+                int selectedRowIndex = dataGridViewExistingCustomers.SelectedRows[0].Index;
+                selectedRow = dataGridViewExistingCustomers.Rows[selectedRowIndex];
+            }
+
+        }
+
+    }
     }
 

@@ -64,7 +64,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(222, 29);
             this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxUsername_MouseClick);
             // 
             // textBoxPassword
             // 
@@ -77,7 +76,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(222, 27);
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.UseSystemPasswordChar = true;
-            this.textBoxPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxPassword_MouseClick);
             // 
             // panel1
             // 
