@@ -48,7 +48,12 @@ namespace PresentationLayer
                     buttonLoanCar.Visible = true;
                     addCarToolStripMenuItem.Visible = true;
                     break;
-                //more roles to be defined... 
+                case "admin":
+                    buttonSellCar.Visible = true;
+                    buttonLoanCar.Visible = true;
+                    addCarToolStripMenuItem.Visible = true;
+                    break;
+                    //more roles to be defined... 
             }
             
         }

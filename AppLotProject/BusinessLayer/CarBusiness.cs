@@ -42,7 +42,7 @@ namespace BusinessLayer
         public List<Car>FindCars(string query)
         {
             query.Trim();
-            return query != "" || query != null ? GetAllCars().FindAll(x => 
+            return query != "" || query != null ? GetAvailableCars().FindAll(x => 
                                            x.Model.ToLower().Contains(query)  || 
                                            x.Year.ToString().Contains(query)  || 
                                            x.Type.ToLower().Contains(query)   || 
@@ -50,7 +50,7 @@ namespace BusinessLayer
                                            x.Fuel.ToString().Contains(query)  ||
                                            x.Color.ToString().Contains(query) ||
                                            x.Condition.ToString().Contains(query)
-                                           )
+                                          )
                                            .ToList() : GetAllCars();
         }
     }
