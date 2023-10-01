@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,13 @@ namespace PresentationLayer
 {
     public partial class DeleteEmployee : Form
     {
-        public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
-        public static List<Employee> employees = employeeBusiness.GetAllEmployees();
-        public DeleteEmployee()
+        public static IEmployeeBusiness employeeBusiness;
+        public static List<Employee> employees;
+        public DeleteEmployee(IEmployeeBusiness _employeeBusiness)
         {
             InitializeComponent();
+            employeeBusiness = _employeeBusiness;
+            employees = employeeBusiness.GetAllEmployees();
         }
 
         private void buttonDeleteEmp_Click(object sender, EventArgs e)

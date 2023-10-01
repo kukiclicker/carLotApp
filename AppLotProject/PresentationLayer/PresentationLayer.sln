@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\Busines
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\Shared\Shared.csproj", "{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CA25DE3C-62DF-4F2E-8877-B79B39924514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarTests", "..\UnitTestProject1\CarTests.csproj", "{15C9FAEC-F40E-4294-B10D-9806C88997F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F8D7C10-52FF-4A41-BC0B-3C02C0A61AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C9FAEC-F40E-4294-B10D-9806C88997F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C9FAEC-F40E-4294-B10D-9806C88997F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C9FAEC-F40E-4294-B10D-9806C88997F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C9FAEC-F40E-4294-B10D-9806C88997F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{15C9FAEC-F40E-4294-B10D-9806C88997F2} = {CA25DE3C-62DF-4F2E-8877-B79B39924514}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D366E84-74AA-45E7-890A-6B660DE0A8B0}

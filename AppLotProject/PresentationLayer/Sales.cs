@@ -1,26 +1,23 @@
-﻿using BusinessLayer;
+﻿
+using Shared.Interfaces;
 using Shared.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PresentationLayer
 {
     public partial class Sales : Form
     {
-        public static SaleBusiness saleBusiness = new SaleBusiness();
+        public static ISaleBusiness saleBusiness;
         public static BindingList<Sale> sales;
         public static DataGridViewRow selectedRow;
         public static int saleID;
-        public Sales()
+        public Sales(ISaleBusiness _saleBusiness)
         {
+            saleBusiness = _saleBusiness;
             InitializeComponent();
             refreshDataGrid();
         }
@@ -31,7 +28,10 @@ namespace PresentationLayer
             {
                 selectedRow= dataGridViewSale.SelectedRows[0];
                 saleID = Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
-                Sale sale = saleBusiness.GetAllSales().Where(x => x.SaleID.Equals(saleID)).FirstOrDefault();
+                Sale sale = saleBusiness
+                    .GetAllSales()
+                    .Where(x => x.SaleID.Equals(saleID))
+                    .FirstOrDefault();
                 textBoxCarID.Text = sale.Car.ToString();
                 textBoxCustomerID.Text = sale.Customer;
                 textBoxEmployeeID.Text = sale.Employee.ToString();
@@ -40,16 +40,22 @@ namespace PresentationLayer
             }
 
         }
-
         private void buttonDeleteSale_Click(object sender, EventArgs e)
         {
             try
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to delete sale with ID: "+saleID,"Confirm",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to delete sale with ID: "
+                    +saleID
+                    ,"Confirm"
+                    ,MessageBoxButtons.YesNo
+                    ,MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
                     saleBusiness.DeleteSale(saleID);
-                    MessageBox.Show("Sale deleted successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sale deleted successfully!"
+                        ,"Info"
+                        ,MessageBoxButtons.OK
+                        ,MessageBoxIcon.Information);
                     refreshDataGrid();
                     clearFields();
                 }
@@ -62,7 +68,8 @@ namespace PresentationLayer
 
         private void refreshDataGrid()
         {
-           sales = new BindingList<Sale>(saleBusiness.GetAllSales());
+           sales = new BindingList<Sale>(saleBusiness
+               .GetAllSales());
            dataGridViewSale.DataSource = sales;
         }
         private void clearFields()
@@ -81,22 +88,32 @@ namespace PresentationLayer
                 {
 
                     saleBusiness.InsertSale(getSale());
-                    MessageBox.Show("New sale added successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("New sale added successfully!"
+                        , "Info"
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Information);
                     refreshDataGrid();
                     clearFields();
                 }
                 catch (Exception exc)
                 {
-                    MessageBox.Show("Error occured while inserting the sale! Check if you've entered existing car, employee and customer jmbg!" + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error occured while inserting the sale! " +
+                        "Check if you've entered existing car, employee and customer jmbg!" 
+                        + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private bool isFieldsEmpty()
         {
-            if (textBoxCarID.Text == "" || textBoxCustomerID.Text == "" || textBoxEmployeeID.Text == "")
+            if (textBoxCarID.Text == "" 
+                || textBoxCustomerID.Text == "" 
+                || textBoxEmployeeID.Text == "")
             {
-                MessageBox.Show("All fields must be filled!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("All fields must be filled!"
+                    , "Error"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
                 return false; 
             }
             return true;    
@@ -109,14 +126,22 @@ namespace PresentationLayer
                 try
                 {
                     Sale saleToUpdate = getSale();
-                    saleToUpdate.SaleID = Convert.ToInt32(selectedRow.Cells[0].Value.ToString());
+                    saleToUpdate.SaleID = Convert.ToInt32(selectedRow
+                        .Cells[0]
+                        .Value
+                        .ToString());
                     saleBusiness.UpdateSale(saleToUpdate);
                     refreshDataGrid();
                     clearFields();
                 }
                 catch (Exception exc)
                 {
-                    MessageBox.Show("Error occured while updating the sale! Check if you've entered existing car, employee and customer jmbg!" + exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error occured while updating the sale! " +
+                        "Check if you've entered existing car, employee and customer jmbg!"
+                        + exc.Message
+                        , "Error"
+                        , MessageBoxButtons.OK
+                        , MessageBoxIcon.Error);
                 }
             }
         }

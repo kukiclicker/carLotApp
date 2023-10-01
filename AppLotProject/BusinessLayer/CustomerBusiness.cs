@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,13 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class CustomerBusiness
+    public class CustomerBusiness:ICustomerBusiness
     {
-        public static CustomerRepository customerRepository = new CustomerRepository();
+        public static ICustomerRepository customerRepository;
+        public CustomerBusiness(ICustomerRepository _customerRepository)
+        {
+            customerRepository = _customerRepository;
+        }
         public List<Customer> GetAllCustomers()
         {
             return customerRepository.GetAllCustomers();

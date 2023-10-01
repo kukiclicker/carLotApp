@@ -1,16 +1,19 @@
-﻿using DataAccessLayer;
+﻿
+using Shared.Interfaces;
 using Shared.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BusinessLayer
 {
-    public class EmployeeBusiness
+    public class EmployeeBusiness:IEmployeeBusiness
     {
-        public static EmployeeRepository employeeRepository = new EmployeeRepository();
+        public static IEmployeeRepository employeeRepository;
+        
+        public EmployeeBusiness(IEmployeeRepository _employeeRepository)
+        {
+            employeeRepository = _employeeRepository;
+        }
         public List<Employee> GetAllEmployees()
         {
             return employeeRepository.GetAllEmployees();
@@ -26,6 +29,5 @@ namespace BusinessLayer
         public int UpdateEmployee(Employee employee) { 
             return employeeRepository.UpdateEmployee(employee); 
         }
-        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,36 +9,41 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class CarBusiness
+    public class CarBusiness:ICarBusiness
     {
-        public static CarRepository carRepository = new CarRepository();
+        public static ICarRepository _carRepository;
+        public CarBusiness(ICarRepository carRepository)
+        {
+           _carRepository = carRepository; 
+        }
+
         public List<Car> GetAvailableCars()
         {
-            return carRepository.GetAllCars().Where(x => x.Status.Contains("AVAILABLE")).ToList();
+            return _carRepository.GetAllCars().Where(x => x.Status.Contains("AVAILABLE")).ToList();
         }
         public List<Car> GetAllCars()
         {
-            return carRepository.GetAllCars();
+            return _carRepository.GetAllCars();
         }
         public Car GetCar(int carID)
         {
-            return (Car)carRepository.GetAllCars().Where(x => x.CarID == carID).Take(1);
+            return (Car)_carRepository.GetAllCars().Where(x => x.CarID == carID).Take(1);
         }
         public int InsertCar(Car car)
         {
-            return carRepository.InsertCar(car);
+            return _carRepository.InsertCar(car);
         }
         public int DeleteCar(int carID)
         {
-            return carRepository.DeleteCar(carID);
+            return _carRepository.DeleteCar(carID);
         }
         public int SellCar(int carID)
         {
-            return carRepository.SellCar(carID);
+            return _carRepository.SellCar(carID);
         }
         public int LoanCar(int carID)
         {
-            return carRepository.LoanCar(carID);
+            return _carRepository.LoanCar(carID);
         }
         public List<Car>FindCars(string query)
         {
@@ -52,6 +58,11 @@ namespace BusinessLayer
                                            x.Condition.ToString().Contains(query)
                                           )
                                            .ToList() : GetAllCars();
+        }
+
+        public int UpdateCar(Car car)
+        {
+            return _carRepository.UpdateCar(car);
         }
     }
 }

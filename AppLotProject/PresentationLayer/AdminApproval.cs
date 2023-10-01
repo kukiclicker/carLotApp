@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -14,14 +15,16 @@ namespace PresentationLayer
 {
     public partial class AdminApproval : Form
     {
-        public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
-        public List<Employee> employees = employeeBusiness.GetAllEmployees();
+        public static IEmployeeBusiness employeeBusiness;
+        public List<Employee> employees;
         public Employee newEmployee;
-        public AdminApproval(Employee newEmployee)
+        public AdminApproval(Employee newEmployee,IEmployeeBusiness _employeeBusiness)
         {
 
             InitializeComponent();
-            this.newEmployee = newEmployee; 
+            this.newEmployee = newEmployee;
+            employeeBusiness = _employeeBusiness;
+            employees = employeeBusiness.GetAllEmployees();
         }
         private void buttonConfirm_MouseClick(object sender, MouseEventArgs e)
         {

@@ -4,3 +4,9 @@ C:\Users\umitr\Desktop\carLotApp\AppLotProject\Shared\obj\Debug\Shared.csproj.As
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\Shared\obj\Debug\Shared.dll
 C:\Users\umitr\Desktop\carLotApp\AppLotProject\Shared\obj\Debug\Shared.pdb
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\bin\Debug\Shared.dll
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\bin\Debug\Shared.pdb
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\obj\Debug\Shared.csproj.AssemblyReference.cache
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\obj\Debug\Shared.dll
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\Shared\obj\Debug\Shared.pdb

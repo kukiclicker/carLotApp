@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,12 @@ namespace PresentationLayer
 {
     public partial class Registration : Form
     {
-        public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
+        public static IEmployeeBusiness employeeBusiness;
         public static List<Employee> employees;
-        public Registration()
+        public Registration(IEmployeeBusiness _employeeBusiness)
         {
             InitializeComponent();
+            employeeBusiness = _employeeBusiness;
         }
         private void btnRegisterX_MouseClick(object sender, MouseEventArgs e)
         {
@@ -94,7 +96,7 @@ namespace PresentationLayer
             //finally creating new employee in database
             else
             {
-                AdminApproval adminForm = new AdminApproval(emp);
+                AdminApproval adminForm = new AdminApproval(emp,employeeBusiness);
                 adminForm.Show();
                 this.Close();
             }

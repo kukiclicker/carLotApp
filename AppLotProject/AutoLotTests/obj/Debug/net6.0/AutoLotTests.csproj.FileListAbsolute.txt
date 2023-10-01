@@ -1,0 +1,5 @@
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\AutoLotTests\obj\Debug\net6.0\AutoLotTests.csproj.AssemblyReference.cache
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\AutoLotTests\obj\Debug\net6.0\AutoLotTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\AutoLotTests\obj\Debug\net6.0\AutoLotTests.AssemblyInfoInputs.cache
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\AutoLotTests\obj\Debug\net6.0\AutoLotTests.AssemblyInfo.cs
+C:\Users\umitr\Source\Repos\carLotApp\AppLotProject\AutoLotTests\obj\Debug\net6.0\AutoLotTests.csproj.CoreCompileInputs.cache

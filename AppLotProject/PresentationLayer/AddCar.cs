@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -14,14 +15,17 @@ namespace PresentationLayer
 {
     public partial class AddCar : Form
     {
-        public CarBusiness carBusiness = new CarBusiness();
-        public AddCar()
+
+        public static ICarBusiness _carBusiness;
+        public AddCar(ICarBusiness carBusiness)
         {
+            _carBusiness = carBusiness;
             InitializeComponent();
             //setting datetimepicker to be only for years 
             dateTimePickerYear.CustomFormat = "yyyy";
             dateTimePickerYear.ShowUpDown = true;
         }
+        
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
@@ -50,7 +54,7 @@ namespace PresentationLayer
                     car.Description = textBoxDescription.Text;
                     car.Condition = comboBoxCondition.Text;
                     car.Status = "AVAILABLE";
-                    carBusiness.InsertCar(car);
+                    _carBusiness.InsertCar(car);
                     //calling function to clear fields for the next addition
                     clearFields();
                     MessageBox.Show("Car added successfuly", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);

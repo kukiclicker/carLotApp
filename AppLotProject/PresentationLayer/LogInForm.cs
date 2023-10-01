@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,22 @@ namespace PresentationLayer
 {
     public partial class LogInForm : Form
     {
-        public static EmployeeBusiness employeeBusiness = new EmployeeBusiness();
+
+       
         public static List<Employee> employees;
-        public LogInForm()
+
+        public static IEmployeeBusiness employeeBusiness;
+        public static ICarBusiness carBusiness;
+        public static ISaleBusiness saleBusiness;
+        public static ICustomerBusiness customerBusiness;
+        public LogInForm(ICarBusiness _carBusiness,IEmployeeBusiness _employeeBusiness
+            ,ISaleBusiness _saleBusiness, ICustomerBusiness _customerBusiness)
         {
+            carBusiness = _carBusiness;
+            employeeBusiness = _employeeBusiness;
+            saleBusiness = _saleBusiness;
+            customerBusiness = _customerBusiness;
+
             InitializeComponent();
             this.AcceptButton = btnLogIn;
         }
@@ -58,7 +71,7 @@ namespace PresentationLayer
                     this.Hide();
                     Employee loggedEmployee = (Employee)employees.Where(emp => emp.UserName.Equals(textBoxUsername.Text)).FirstOrDefault();
                     //running main application form
-                    new CarLotApp(loggedEmployee).Show();
+                    new CarLotApp(loggedEmployee, carBusiness,employeeBusiness,saleBusiness,customerBusiness).Show();
                 }
 
             }
@@ -66,7 +79,7 @@ namespace PresentationLayer
         //running register form on click of the button 
         private void btnRegister_MouseClick(object sender, MouseEventArgs e)
         {
-            new Registration().Show();
+            new Registration(employeeBusiness).Show();
         }
 
         //making password visible/invisible

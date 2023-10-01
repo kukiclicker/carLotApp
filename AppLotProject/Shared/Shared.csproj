@@ -42,9 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\ICarBusiness.cs" />
     <Compile Include="Interfaces\ICarRepository.cs" />
+    <Compile Include="Interfaces\ICustomerBusiness.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
+    <Compile Include="Interfaces\IEmployeeBusiness.cs" />
     <Compile Include="Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Interfaces\ISaleBusiness.cs" />
     <Compile Include="Interfaces\ISaleRepository.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Customer.cs" />

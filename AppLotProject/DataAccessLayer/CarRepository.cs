@@ -124,10 +124,10 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "UPDATE CARS SET status = 'SOLD' WHERE CarID = "+carID;
+                    sqlCommand.CommandText = "UPDATE CARS SET status = 'SOLD' WHERE CarID = " + carID;
                     return sqlCommand.ExecuteNonQuery();
                 }
-               
+
             }
         }
         public int LoanCar(int carID)

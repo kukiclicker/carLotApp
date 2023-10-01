@@ -13,5 +13,8 @@ namespace Shared.Interfaces
         int InsertCar(Car car);
         int UpdateCar(Car car);
         int DeleteCar(int carID);
+        int SellCar(int carID);
+        int LoanCar(int carID);
+
     }
 }

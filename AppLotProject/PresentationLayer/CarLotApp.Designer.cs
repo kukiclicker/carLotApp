@@ -379,6 +379,7 @@
             this.Name = "CarLotApp";
             this.Text = "Car lot ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CarLotApp_FormClosed);
+            this.Load += new System.EventHandler(this.CarLotApp_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CarLotApp_MouseClick);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
