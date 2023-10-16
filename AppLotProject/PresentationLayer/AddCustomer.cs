@@ -105,6 +105,7 @@ namespace PresentationLayer
                 sale.Car = carId;
                 sale.Customer = customer.JMBG;
                 saleBusiness.InsertSale(sale);
+                carBusiness.SellCar(carId);
                 MessageBox.Show("Car sold!"
                     ,"Info"
                     ,MessageBoxButtons.OK

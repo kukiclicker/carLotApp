@@ -19,7 +19,7 @@ namespace BusinessLayer
 
         public List<Car> GetAvailableCars()
         {
-            return _carRepository.GetAllCars().Where(x => x.Status.Contains("AVAILABLE")).ToList();
+            return _carRepository.GetAllCars().Where(x => x.Status.ToUpper().Contains("AVAILABLE")).ToList();
         }
         public List<Car> GetAllCars()
         {

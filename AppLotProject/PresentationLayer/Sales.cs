@@ -12,12 +12,14 @@ namespace PresentationLayer
     public partial class Sales : Form
     {
         public static ISaleBusiness saleBusiness;
+        public static ICarBusiness carBusiness;
         public static BindingList<Sale> sales;
         public static DataGridViewRow selectedRow;
         public static int saleID;
-        public Sales(ISaleBusiness _saleBusiness)
+        public Sales(ISaleBusiness _saleBusiness,ICarBusiness _carBusiness)
         {
             saleBusiness = _saleBusiness;
+            carBusiness = _carBusiness;
             InitializeComponent();
             refreshDataGrid();
         }
@@ -82,11 +84,10 @@ namespace PresentationLayer
 
         private void btnAddSale_Click(object sender, EventArgs e)
         {
-            if (isFieldsEmpty())
+            if (IsFieldsFilled()&&IsCarAvailable())
             {
                 try
                 {
-
                     saleBusiness.InsertSale(getSale());
                     MessageBox.Show("New sale added successfully!"
                         , "Info"
@@ -104,7 +105,7 @@ namespace PresentationLayer
             }
         }
 
-        private bool isFieldsEmpty()
+        private bool IsFieldsFilled()
         {
             if (textBoxCarID.Text == "" 
                 || textBoxCustomerID.Text == "" 
@@ -114,14 +115,27 @@ namespace PresentationLayer
                     , "Error"
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
-                return false; 
+                return false;
             }
             return true;    
+        }
+        private bool IsCarAvailable()
+        {
+            Car car = carBusiness.GetCar(Convert.ToInt32(textBoxCarID.Text.ToString()));
+            if (car.Status.ToUpper() != "AVAILABLE")
+            {
+                MessageBox.Show($"Car with id = {car.CarID} isn't available!"
+                    , "Error"
+                    , MessageBoxButtons.OK
+                    , MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void buttonUpdateSale_Click(object sender, EventArgs e)
         {
-            if (isFieldsEmpty())
+            if (IsFieldsFilled())
             {
                 try
                 {

@@ -193,6 +193,7 @@
             this.dataGridViewAvailableCars.Size = new System.Drawing.Size(485, 316);
             this.dataGridViewAvailableCars.TabIndex = 1;
             this.dataGridViewAvailableCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAvailableCars_CellClick);
+            this.dataGridViewAvailableCars.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAvailableCars_CellContentClick);
             // 
             // textBoxSearch
             // 
@@ -377,7 +378,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CarLotApp";
-            this.Text = "Car lot ";
+            this.Text = "Car lot app";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CarLotApp_FormClosed);
             this.Load += new System.EventHandler(this.CarLotApp_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CarLotApp_MouseClick);

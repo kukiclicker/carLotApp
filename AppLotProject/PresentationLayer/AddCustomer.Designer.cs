@@ -273,7 +273,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCustomer";
-            this.Text = "AddCustomer";
+            this.Text = "Car lot app - Sell car";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExistingCustomers)).EndInit();

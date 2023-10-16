@@ -97,7 +97,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Delete Employee";
+            this.Text = "Car lot app - Delete Employee";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -67,14 +67,14 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "INSERT INTO Employees VALUES (@Name,@LastName,@Password,@Address,@Phone,@Email,@username,@Role,@Gender)";
+                    sqlCommand.CommandText = "INSERT INTO Employees(Name,LastName,Password,Address,PhoneNumber,Email,UserName,Role,Gender) VALUES (@Name,@LastName,@Password,@Address,@PhoneNumber,@Email,@UserName,@Role,@Gender)";
                     sqlCommand.Parameters.AddWithValue("@Name", employee.Name);
                     sqlCommand.Parameters.AddWithValue("@LastName", employee.LastName);
                     sqlCommand.Parameters.AddWithValue("@Password", employee.Password);
                     sqlCommand.Parameters.AddWithValue("@Address", employee.Address);
-                    sqlCommand.Parameters.AddWithValue("@Phone", employee.PhoneNumber);
+                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", employee.PhoneNumber);
                     sqlCommand.Parameters.AddWithValue("@Email", employee.Email);
-                    sqlCommand.Parameters.AddWithValue("@username", employee.UserName);
+                    sqlCommand.Parameters.AddWithValue("@UserName", employee.UserName);
                     sqlCommand.Parameters.AddWithValue("@Role", employee.Role);
                     sqlCommand.Parameters.AddWithValue("@Gender", employee.Gender);
                     return sqlCommand.ExecuteNonQuery();

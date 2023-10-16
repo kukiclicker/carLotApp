@@ -203,10 +203,15 @@ namespace PresentationLayer
 
         private void salesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Sales(saleBusiness).ShowDialog();
+            new Sales(saleBusiness,carBusiness).ShowDialog();
         }
 
         private void CarLotApp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewAvailableCars_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
