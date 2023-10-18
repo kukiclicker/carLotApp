@@ -47,6 +47,7 @@ namespace BusinessLayer
         }
         public List<Car>FindCars(string query)
         {
+            query.Replace(" ", "");
             query.Trim();
             return query != "" || query != null ? GetAvailableCars().FindAll(x => 
                                            x.Model.ToLower().Contains(query)  || 

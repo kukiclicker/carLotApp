@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSellToNewCustomer = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewExistingCustomers = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -151,21 +151,21 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Phone number:";
             // 
-            // button1
+            // btnSellToNewCustomer
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnSellToNewCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(107, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 29);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Sell to new customer";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSellToNewCustomer.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnSellToNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSellToNewCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSellToNewCustomer.ForeColor = System.Drawing.Color.Snow;
+            this.btnSellToNewCustomer.Location = new System.Drawing.Point(107, 325);
+            this.btnSellToNewCustomer.Name = "btnSellToNewCustomer";
+            this.btnSellToNewCustomer.Size = new System.Drawing.Size(149, 29);
+            this.btnSellToNewCustomer.TabIndex = 9;
+            this.btnSellToNewCustomer.Text = "Sell to new customer";
+            this.btnSellToNewCustomer.UseVisualStyleBackColor = false;
+            this.btnSellToNewCustomer.Click += new System.EventHandler(this.btnSellToNewCustomer_click);
             // 
             // panel1
             // 
@@ -269,7 +269,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridViewExistingCustomers);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSellToNewCustomer);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCustomer";
@@ -293,7 +293,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSellToNewCustomer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewExistingCustomers;
         private System.Windows.Forms.Label label6;

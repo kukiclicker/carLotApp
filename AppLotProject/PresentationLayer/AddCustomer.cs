@@ -2,16 +2,9 @@
 using Shared.Interfaces;
 using Shared.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PresentationLayer
 {
@@ -36,7 +29,7 @@ namespace PresentationLayer
             dataGridViewExistingCustomers.DataSource = customerBusiness.GetAllCustomers();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSellToNewCustomer_click(object sender, EventArgs e)
         {
             try
             {
@@ -90,8 +83,7 @@ namespace PresentationLayer
             }
 
         }
-
-        private void btnSellToExistingCustomer_Click(object sender, EventArgs e)
+        private async void btnSellToExistingCustomer_Click(object sender, EventArgs e)
         {
             try
             {

@@ -30,12 +30,13 @@ namespace PresentationLayer
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             Car car = new Car();
+
             try
             {
-                if(textBoxModel.Text == "" || textBoxType.Text == "" || comboBoxCarBody.Text == "" ||
-                   comboBoxFuel.Text == "" || textBoxEngine.Text == "" || comboBoxTransmission.Text == ""||
-                   textBoxMileage.Text == "" || textBoxColor.Text == "" || textBoxPrice.Text == "" ||
-                   comboBoxCondition.Text == "")
+                if (textBoxModel.Text == "" || textBoxType.Text == "" || comboBoxCarBody.Text == "" ||
+                        comboBoxFuel.Text == "" || textBoxEngine.Text == "" || comboBoxTransmission.Text == "" ||
+                        textBoxMileage.Text == "" || textBoxColor.Text == "" || textBoxPrice.Text == "" ||
+                        comboBoxCondition.Text == "")
                 {
                     MessageBox.Show("All fields except description must be filled. Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -59,11 +60,10 @@ namespace PresentationLayer
                     clearFields();
                     MessageBox.Show("Car added successfuly", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
-            catch(Exception exc)
+            catch (Exception excp)
             {
-                //TO-DO Exception handling
+                MessageBox.Show("Invalid input. Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
