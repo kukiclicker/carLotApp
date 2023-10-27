@@ -21,7 +21,7 @@ namespace PresentationLayer
             saleBusiness = _saleBusiness;
             carBusiness = _carBusiness;
             InitializeComponent();
-            refreshDataGrid();
+            RefreshDataGrid();
         }
 
         private void dataGridViewSale_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,8 +58,8 @@ namespace PresentationLayer
                         ,"Info"
                         ,MessageBoxButtons.OK
                         ,MessageBoxIcon.Information);
-                    refreshDataGrid();
-                    clearFields();
+                    RefreshDataGrid();
+                    ClearFields();
                 }
             }
             catch(Exception exc)
@@ -68,13 +68,13 @@ namespace PresentationLayer
             }
         }
 
-        private void refreshDataGrid()
+        private void RefreshDataGrid()
         {
            sales = new BindingList<Sale>(saleBusiness
                .GetAllSales());
            dataGridViewSale.DataSource = sales;
         }
-        private void clearFields()
+        private void ClearFields()
         {
             textBoxCarID.Text = "";
             textBoxCustomerID.Text = "";
@@ -84,17 +84,20 @@ namespace PresentationLayer
 
         private void btnAddSale_Click(object sender, EventArgs e)
         {
-            if (IsFieldsFilled()&&IsCarAvailable())
+            int carID = Convert.ToInt32(textBoxCarID.Text);
+            bool carIsAvailable = carBusiness.IsCarAvailable(carID);
+            if (IsFieldsFilled() && carIsAvailable)
             {
                 try
                 {
-                    saleBusiness.InsertSale(getSale());
+                    saleBusiness.InsertSale(GetUpdateSale());
+                    carBusiness.SellCar(carID);
                     MessageBox.Show("New sale added successfully!"
                         , "Info"
                         , MessageBoxButtons.OK
                         , MessageBoxIcon.Information);
-                    refreshDataGrid();
-                    clearFields();
+                    RefreshDataGrid();
+                    ClearFields();
                 }
                 catch (Exception exc)
                 {
@@ -119,19 +122,7 @@ namespace PresentationLayer
             }
             return true;    
         }
-        private bool IsCarAvailable()
-        {
-            Car car = carBusiness.GetCar(Convert.ToInt32(textBoxCarID.Text.ToString()));
-            if (car.Status.ToUpper() != "AVAILABLE")
-            {
-                MessageBox.Show($"Car with id = {car.CarID} isn't available!"
-                    , "Error"
-                    , MessageBoxButtons.OK
-                    , MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
-        }
+      
 
         private void buttonUpdateSale_Click(object sender, EventArgs e)
         {
@@ -139,14 +130,19 @@ namespace PresentationLayer
             {
                 try
                 {
-                    Sale saleToUpdate = getSale();
-                    saleToUpdate.SaleID = Convert.ToInt32(selectedRow
-                        .Cells[0]
-                        .Value
-                        .ToString());
-                    saleBusiness.UpdateSale(saleToUpdate);
-                    refreshDataGrid();
-                    clearFields();
+                    Sale saleToUpdate = GetUpdateSale();
+                    if (selectedRow != null)
+                    {
+                        saleToUpdate.SaleID = Convert.ToInt32(selectedRow
+                            .Cells[0]
+                            .Value
+                            .ToString());
+
+                        saleBusiness.UpdateSale(saleToUpdate);
+                        carBusiness.SellCar(saleToUpdate.Car);
+                        RefreshDataGrid();
+                        ClearFields();
+                    }
                 }
                 catch (Exception exc)
                 {
@@ -159,7 +155,7 @@ namespace PresentationLayer
                 }
             }
         }
-        private Sale getSale()
+        private Sale GetUpdateSale()
         {
             Sale sale = new Sale
             {

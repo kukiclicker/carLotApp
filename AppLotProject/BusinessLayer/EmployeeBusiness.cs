@@ -29,5 +29,8 @@ namespace BusinessLayer
         public int UpdateEmployee(Employee employee) { 
             return employeeRepository.UpdateEmployee(employee); 
         }
+        public Employee GetEmployee(int employeeID) {
+            return employeeRepository.GetEmployee(employeeID);
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace CarUnitTest
             Model = "BMW",
             Type = "X3",
             CarBody = "SUV",
-            Condition = "NEW",
+            CarCondition = "NEW",
             Price = 13000,
             Description = "",
             Engine = "1.9",
@@ -30,7 +30,7 @@ namespace CarUnitTest
             Fuel = "Diesel",
             CarID = 1,
             Mileage = "10000",
-            Status = "AVAILABLE",
+            CarStatus = "AVAILABLE",
             Year = 2016
         };
         private List<Car> carList = new List<Car>();

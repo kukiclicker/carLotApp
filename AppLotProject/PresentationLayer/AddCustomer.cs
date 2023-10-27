@@ -83,7 +83,7 @@ namespace PresentationLayer
             }
 
         }
-        private async void btnSellToExistingCustomer_Click(object sender, EventArgs e)
+        private void btnSellToExistingCustomer_Click(object sender, EventArgs e)
         {
             try
             {

@@ -18,5 +18,6 @@ namespace Shared.Interfaces
         List<Car> FindCars(string query);
         List<Car> GetAvailableCars();
         Car GetCar(int carID);
+        bool IsCarAvailable(int carID);
     }
 }

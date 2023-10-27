@@ -53,8 +53,8 @@ namespace PresentationLayer
                     car.Color = textBoxColor.Text;
                     car.Price = Convert.ToDouble(textBoxPrice.Text);
                     car.Description = textBoxDescription.Text;
-                    car.Condition = comboBoxCondition.Text;
-                    car.Status = "AVAILABLE";
+                    car.CarCondition = comboBoxCondition.Text;
+                    car.CarStatus = "AVAILABLE";
                     _carBusiness.InsertCar(car);
                     //calling function to clear fields for the next addition
                     clearFields();

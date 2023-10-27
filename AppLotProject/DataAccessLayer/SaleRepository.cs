@@ -77,7 +77,7 @@ namespace DataAccessLayer
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
             {
-                string command = "UPDATE Sales SET SaleDate = @SaleDate, Employee = @Employee, Car = @Car, Customer = @Customer WHERE SaleID= "+sale.SaleID;
+                string command = "UPDATE Sales SET SaleDate = @SaleDate, EmployeeID = @Employee, CarID = @Car, Customer = @Customer WHERE SaleID= "+sale.SaleID;
 
                 SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@SaleDate", sale.SaleDate);

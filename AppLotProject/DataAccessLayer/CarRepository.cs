@@ -38,8 +38,8 @@ namespace DataAccessLayer
                         Color = sqlDataReader.GetString(9),
                         Description = sqlDataReader.GetString(10),
                         Price = sqlDataReader.GetDouble(11),
-                        Condition = sqlDataReader.GetString(12),
-                        Status = sqlDataReader.GetString(13)
+                        CarCondition = sqlDataReader.GetString(12),
+                        CarStatus = sqlDataReader.GetString(13)
                     };
                     cars.Add(car);
                 }
@@ -70,7 +70,7 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "INSERT INTO CARS VALUES (@Model,@Type,@Year,@CarBody,@Fuel,@Mileage,@Engine,@Transmission,@Color,@Description,@Price,@Condition,@status)";
+                    sqlCommand.CommandText = "INSERT INTO CARS VALUES (@Model,@Type,@Year,@CarBody,@Fuel,@Mileage,@Engine,@Transmission,@Color,@Description,@Price,@CarCondition,@CarStatus)";
                     sqlCommand.Parameters.AddWithValue("@Model", car.Model);
                     sqlCommand.Parameters.AddWithValue("@Type", car.Type);
                     sqlCommand.Parameters.AddWithValue("@Year", car.Year);
@@ -82,8 +82,8 @@ namespace DataAccessLayer
                     sqlCommand.Parameters.AddWithValue("@Color", car.Color);
                     sqlCommand.Parameters.AddWithValue("@Description", car.Description);
                     sqlCommand.Parameters.AddWithValue("@Price", car.Price);
-                    sqlCommand.Parameters.AddWithValue("@Condition", car.Condition);
-                    sqlCommand.Parameters.AddWithValue("@status", car.Status);
+                    sqlCommand.Parameters.AddWithValue("@CarCondition", car.CarCondition);
+                    sqlCommand.Parameters.AddWithValue("@CarStatus", car.CarStatus);
                     return sqlCommand.ExecuteNonQuery();
                 }
             }
@@ -96,7 +96,7 @@ namespace DataAccessLayer
                 string command = "UPDATE CARS SET CarID=@CarID, Model =@Model , " +
                     "Type=@Type, Year=@Year, CarBody=@CarBody, Fuel=@Fuel, Mileage=@Mileage, " +
                     "Engine=@Engine,Transmission=@Transmission,Color=@Color,Description=@Description" +
-                    ",Price=@Price, Condition=@Condition  WHERE CarID=@CarID";
+                    ",Price=@Price, CarCondition=@CarCondition  WHERE CarID=@CarID";
                 SqlCommand sqlCommand = new SqlCommand(command, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@CarID", car.CarID);
                 sqlCommand.Parameters.AddWithValue("@Model", car.Model);
@@ -110,7 +110,7 @@ namespace DataAccessLayer
                 sqlCommand.Parameters.AddWithValue("@Color", car.Color);
                 sqlCommand.Parameters.AddWithValue("@Description", car.Description);
                 sqlCommand.Parameters.AddWithValue("@Price", car.Price);
-                sqlCommand.Parameters.AddWithValue("@Condition", car.Condition);
+                sqlCommand.Parameters.AddWithValue("@CarCondition", car.CarCondition);
 
                 return sqlCommand.ExecuteNonQuery();
 
@@ -124,7 +124,7 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "UPDATE CARS SET status = 'SOLD' WHERE CarID = " + carID;
+                    sqlCommand.CommandText = "UPDATE CARS SET CarStatus = 'SOLD' WHERE CarID = " + carID;
                     return sqlCommand.ExecuteNonQuery();
                 }
 
@@ -138,7 +138,7 @@ namespace DataAccessLayer
                 using (SqlCommand sqlCommand = new SqlCommand())
                 {
                     sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandText = "UPDATE CARS SET status = 'LOANED' WHERE CarID = " + carID;
+                    sqlCommand.CommandText = "UPDATE CARS SET CarStatus = 'LOANED' WHERE CarID = " + carID;
                     return sqlCommand.ExecuteNonQuery();
                 }
 

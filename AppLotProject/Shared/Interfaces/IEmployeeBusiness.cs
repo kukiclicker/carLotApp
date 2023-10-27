@@ -13,5 +13,6 @@ namespace Shared.Interfaces
         int InsertEmployee(Employee employee);
         int UpdateEmployee(Employee employee);
         int DeleteEmployee(int emplyeeid);
+        Employee GetEmployee(int employeeID);
     }
 }

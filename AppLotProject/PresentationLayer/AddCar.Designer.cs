@@ -206,7 +206,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(103, 30);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Condition";
+            this.label12.Text = "CarCondition";
             // 
             // comboBoxCondition
             // 

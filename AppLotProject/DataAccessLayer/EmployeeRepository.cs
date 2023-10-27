@@ -105,5 +105,32 @@ namespace DataAccessLayer
 
             }
         }
+
+        public Employee GetEmployee(int employeeID)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = $"SELECT * FROM EMPLOYEES WHERE EmployeeID = {employeeID}";
+                sqlConnection.Open();
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                sqlDataReader.Read();
+                Employee employee = new Employee
+                {
+                    EmployeeID = sqlDataReader.GetInt32(0),
+                    Name = sqlDataReader.GetString(1),
+                    LastName = sqlDataReader.GetString(2),
+                    Password = sqlDataReader.GetString(3),
+                    Address = sqlDataReader.GetString(4),
+                    PhoneNumber = sqlDataReader.GetString(5),
+                    Email = sqlDataReader.GetString(6),
+                    UserName = sqlDataReader.GetString(7),
+                    Role = sqlDataReader.GetString(8),
+                    Gender = sqlDataReader.GetString(9)
+                };
+                return employee;
+            }
+        }
     }
 }
